@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- aqui haremos un menu basico, un contenido y un footer -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <title>Audio y video con HTML 5</title>
+    <!--
+    no es bueno pero no es descartable
+    <style>
+        a{
+            color: aqua;
+        }
+    </style> 
+
+-->
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <!-- ul>(li>a)*5 -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="imagenes.html">Imágenes</a></li>
+          <li><a class="active" href="audioVideo.html">Audio y Video</a></li>
+          <li><a href="iframes.html">Marcos flotantes</a></li>
+          <li><a href="formularios/index.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Audio y video con HTML 5</h1>
+      <section>
+        <h2>audio</h2>
+        <p>Desde Html 5 disponemos de la etiqueta &lt;audio&gt;</p>
+        <div>
+          <audio src="MEDIA/hakunamatataItmeansnoworries.mp3" controls></audio>
+          <audio controls>
+            <source
+              src="MEDIA/hakunamatataItmeansNoworries.ogg"
+              type="audio/ogg"
+            />
+            <source
+              src="MEDIA/hakunamatataItmeansnoworries.mp3"
+              type="audio/mp3"
+            />
+          </audio>
+        </div>
+      </section>
+      <section>
+        <h2>video</h2>
+        <p>Html 5 dispone de la etiqueta &lt;video&gt;</p>
+        <div>
+          <video
+            id="video1"
+            src="MEDIA/leon.mp4"
+            controls
+            poster="MEDIA/leon.jpg"
+          ></video>
+          <video controls poster="MEDIA/musicos.jpg">
+            <source src="MEDIA/video.ogv" type="video/ogg" />
+            <source src="MEDIA/video.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div id="controles">
+          <button class="boton demo" id="playPause">play/pause</button
+          >|| <button class="boton demo" id="pley">play</button>||
+          <button class="boton demo" id="pausa">pause</button>
+        </div>
+      </section>
+      <section>
+        <h2>Enlace a demo HTML con video de fondo</h2>
+        <div class="botones">
+          <input
+            class="demo"
+            id="abrirvideo"
+            type="button"
+            value="Abrir demo con formulario"
+          />
+          <!-- <button class="demo" onclick="abrirDemo();">Abrir demo con javascript</button> -->
+          <a class="demo" href="" id="abrirvideo2"
+            >abir la misma demo desde un hipervinculo</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <p>
+          Calle Desierta, s/n 47007 <strong>Bolonia del Sur</strong>
+          <strong><em>Michiganlandia </em></strong>
+        </p>
+        <p>
+          &copy; <a href="https://yomismo.com" target="New">yomismo.com</a> ||
+          <a href="mailto:info@yomismo.com">Contacta con nosotros por email</a>
+        </p>
+      </div>
+      <div>
+        <p>
+          <a href="tel:555555555"><span>Contacta por &#9742; telefono</span></a>
+          o
+          <a href="https://api.whatsapp.com/send?phone=34675050777&text=hola!"
+            ><i class="fa fa-whatsapp"></i> <span>por whatsapp</span></a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="js/AVscript.js"></script>
+  </body>
+  
+</html>

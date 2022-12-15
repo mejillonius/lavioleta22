@@ -1,0 +1,24 @@
+*,::before,::after{
+    margin:0px;
+}
+html, body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px; /* proporciones rem, determinamos la unidad desde un elemento en el que no se ve, las proporciones NO cambian con el dispositivo*/
+    width: 100vw;
+    min-height: 100vh;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+div{
+/*     margin-top: 10vh;
+    margin-left: 10vw; */
+    height: 80vh;
+    width: 80vw;
+    background-color: blueviolet;
+}

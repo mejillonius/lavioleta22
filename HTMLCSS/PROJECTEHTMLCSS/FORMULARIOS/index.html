@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- aqui haremos un menu basico, un contenido y un footer -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Contactar con Violeta 22 || Html y Css</title>
+    <!--
+    no es bueno pero no es descartable
+    <style>
+        a{
+            color: aqua;
+        }
+    </style> 
+
+-->
+  </head>
+  <body>
+    <header>
+      <nav>
+        <label for="menu" class="showMenu">&equiv;</label>
+        <input type="checkbox" id="menu" name="menu">
+        <ul>
+          <!-- ul>(li>a)*5 -->
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../imagenes.html">Imágenes</a></li>
+          <li><a href="../audioVideo.html">Audio y Video</a></li>
+          <li><a href="../iframes.html">Marcos flotantes</a></li>
+          <li><a class="active" href="formularios/index.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Página formulario del proyecto Violeta 22</h1>
+
+      <h3>contacta con nosotros</h3>
+      <form
+        action="directorio/gestor.php"
+        method="get"
+        id="firstContact"
+        name="firstContact"
+      >
+        <!-- por defecto se envia con method=get y es el que los datos se ven, el metodo post es el que no se ven los datos en la barra de direccion -->
+        <fieldset>
+          <!-- crea un marco para guiar al usuario -->
+          <legend>Datos personales</legend>
+          <div>
+            <label for="nombre">Nombre: </label>
+            <!-- el for es para name -->
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Indica tu nombre"
+              pattern="^ZÀ][A-{1}[a-zA-ZÀ-ÿ\u00f1\u00d1\s]{2,40}$"
+            />
+          </div>
+          <div>
+            <label for="mail">Correo electronico: </label>
+            <input
+              type="text"
+              name="mail"
+              id="mail"
+              placeholder="Indica tu email"
+              pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,9}"
+            />
+          </div>
+          <div>
+            <label for="cp">Codigo postal: </label>
+            <input
+              type="text"
+              name="cp"
+              id="cp"
+              placeholder="Indica tu codigo postal"
+              pattern="[0-9]{5}"
+            />
+          </div>
+          <div>
+            <label for="telefono">Telefono:</label>
+            <input
+              type="number"
+              name="telefono"
+              id="telefono"
+              placeholder="644444444"
+              min="600000000"
+              max="999999999"
+              size="9"
+            />
+          </div>
+
+          <div>
+            <p>Sexo:</p>
+            <input
+              type="radio"
+              name="sexo"
+              id="hombre"
+              value="hombre"
+              checked
+            />
+            <label for="hombre">hombre</label>
+            <input type="radio" name="sexo" id="mujer" value="mujer" />
+            <label for="mujer">mujer</label>
+            <input
+              type="radio"
+              name="sexo"
+              id="helicoptero"
+              value="no_binario"
+            />
+            <label for="helicoptero">no binario</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Aficiones</legend>
+          <p>indica con que juegas</p>
+          <div>
+            <input type="checkbox" name="xbox" id="xbox" />
+            <label for="xbox">Xbox</label>
+          </div>
+          <div>
+            <input type="checkbox" name="ps5" id="ps5" />
+            <label for="ps5">ps5</label>
+          </div>
+          <div>
+            <input type="checkbox" name="switch" id="switch" />
+            <label for="switch">switch</label>
+          </div>
+          <div>
+            <label for="sistemas">SO preferido</label>
+            <select name="sistemas" id="sistemas" required>
+              <option value="" selected disabled>
+                Selecciona un sistema operativo
+              </option>
+              <option value="win">windows</option>
+              <option value="mac">mac</option>
+              <option value="linux">linux</option>
+            </select>
+          </div>
+          <div class="top">
+            <label for="tuvida">Explicanos en que te podemos ayudar</label>
+            <textarea
+              name="tuvida"
+              id="tuvida"
+              cols="30"
+              rows="10"
+              placeholder="Cuentanos tu vida"
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Enviar</legend>
+          <div>
+            <input class="demo" type="reset" value="borrar formulario" />
+            <input class="demo" type="submit" value="enviar" />
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <div>
+        <p>
+          Calle Desierta, s/n 47007 <strong>Bolonia del Sur</strong>
+          <strong><em>Michiganlandia </em></strong>
+        </p>
+        <p>
+          &copy; <a href="https://yomismo.com" target="New">yomismo.com</a> ||
+          <a href="mailto:info@yomismo.com">Contacta con nosotros por email</a>
+        </p>
+      </div>
+      <div>
+        <p>
+          <a href="tel:555555555"><span>Contacta por &#9742; telefono</span></a>
+          o
+          <a href="https://api.whatsapp.com/send?phone=34675050777&text=hola!"
+            ><i class="fa fa-whatsapp"></i> <span>por whatsapp</span></a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

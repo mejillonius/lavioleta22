@@ -1,0 +1,407 @@
+/* comentarios
+    selector, o selectores {
+        propiedad: valor;
+        propiedad: valor;
+    }
+
+*/
+
+/* reseteo minimo de css */
+*,::before,::after{
+    margin:0px;
+}
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px; /* proporciones rem, determinamos la unidad desde un elemento en el que no se ve, las proporciones NO cambian con el dispositivo*/
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px; // proporciones em, las proporciones SI cambian con el dispositivo, dependen de la densidad de puntos //
+} */
+
+p{
+    font-size: 1rem; /*el tamaño es proporcional a lo que se ha definido en la etiqueta html*/
+    margin-bottom: 1rem;
+
+
+}
+
+h1{
+    font-size: 2.45rem;
+    font-weight: 900; /* determina el grueso y el espaciado de la letra*/
+    margin-bottom: 2rem;
+}
+h2{
+    font-size: 1.9rem;
+    font-weight: 900;
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+h4{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+h5{
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+nav{
+    background-color: black;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0; /*deprecado pero algunos navegadores viejos esperan coordenadas*/ 
+    left: 0;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /*esto no hace nada con el valor row*/
+    flex-wrap: nowrap; /*esto tampoco con el valor nowrap*/
+    /* text-align: center; */
+    align-items:flex-start;
+}
+
+nav a { /* todos los a que haya dentro de un nav*/
+    color: aliceblue;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+nav a:hover {
+    background-color: aliceblue;
+    color: black;
+    text-decoration:overline;
+}
+
+label.showMenu{
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+    font-weight: 800;
+    color: white;
+    display: none ;
+}
+header input[type="checkbox"]{
+    display: none;
+}
+
+.active{
+    text-decoration: overline;
+    background-color: rgba(79, 86, 227, 0.637);
+    color: black;
+    cursor:default;
+    pointer-events: none;
+}
+
+main{
+    min-height: 80vh;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+div.mostra{
+    border: 5px solid red;
+    width: 100%;
+    padding: 1rem;
+/*     height: 30px; */
+    overflow:hidden;
+    box-sizing: border-box;
+
+}
+
+.interior{
+    width: 80%;
+    padding: 2rem;
+    background-color: brown;
+    height: 100px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    width: 20%;
+    padding: 2rem;
+    height: 100px;
+    background-color: aqua;
+    float: right;
+    box-sizing: border-box;
+}
+
+footer{
+    min-height: 10vh;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    color: aliceblue;
+    background-color: black;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+
+}
+footer a{
+    color: cyan;
+    text-decoration: none;
+}
+footer a:hover{
+    color: aliceblue;
+}
+footer p{
+    font-size: 18px;
+}
+
+section{
+   text-align: center; 
+}
+
+.cards{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.cards div{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.cards div:hover{
+
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    
+}
+
+.cards div p, .cards div h3{
+    text-align: left;
+    opacity: 0;
+    color: red;
+    transition: all ease .4s;
+
+}
+.cards div:hover p, .cards div:hover h3{
+    text-align: left;
+    opacity: 1;
+    margin-top: 1rem;
+    color: white;
+    
+}
+
+.cards h2{
+    width: 100vw;
+    text-align: center;
+}
+
+img, .cards div{
+    margin: 1rem;
+}
+
+#fons1{
+    background-image: url(https://picsum.photos/300?random=10);
+}
+#fons2{
+    background-image: url(https://picsum.photos/300?random=11);
+}
+#fons3{
+    background-image: url(https://picsum.photos/300?random=12);
+}
+#fons4{
+    background-image: url(https://picsum.photos/300?random=13);
+}
+#fons5{
+    background-image: url(https://picsum.photos/300?random=14);
+}
+#fons6{
+    background-image: url(https://picsum.photos/300?random=15);
+}
+#fons7{
+    background-image: url(https://picsum.photos/300?random=16);
+}
+#fons8{
+    background-image: url(https://picsum.photos/300?random=17);
+}
+#fons9{
+    background-image: url(https://picsum.photos/300?random=18);
+}
+
+#fons1:hover,#fons2:hover,#fons3:hover,#fons4:hover,#fons5:hover,#fons6:hover,#fons7:hover,#fons8:hover,#fons9:hover {
+    background-image: none;
+    
+}
+
+.botones{
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:3rem;
+}
+
+.demo{
+    background-color: aquamarine;
+    border: none;
+    color: black;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.demo:hover{
+    color: aquamarine;
+    background-color: black;
+    transition: all ease 0.5s;
+    
+}
+
+.filter1:hover{
+    filter: blur(5px);
+}
+.filter2:hover{
+    filter: sepia(100);
+}
+.filter3:hover{
+    filter: brightness(0%);
+}
+.filter4:hover{
+    filter: grayscale(100);
+}
+
+iframe{
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.iframes.right{
+    width: 40%;
+}
+.iframes.left{
+    width: 55%;
+    
+}
+
+/* formateo del formulario */
+
+fieldset{
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;  */
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+label, fieldset p, legend{
+    width: 250px;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+input[type="text"], input[type="number"], input[type="email"], textarea, select{
+    width: 60%;
+    font-size: 1.1rem;
+    padding: .4rem .8rem;
+    border: none;
+    border-bottom: 2px solid #666;
+    margin: .4rem;
+    background-color: rgba(102, 102, 102, 0.093);
+}
+textarea{
+    border: 1px dashed #666;
+
+}
+
+
+
+@media screen and (max-width:768px){
+    main{
+        max-width: 95vw;
+        background-color: antiquewhite;
+        margin-top: 4.5rem;
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+    label.showMenu{
+        display: flex;
+        width: 8vw;
+        cursor: pointer;
+    }
+    nav{
+        justify-content: flex-start;
+    }
+    nav ul{
+        opacity: 0;
+        margin-top: -80px;
+        margin-left: 1.8rem;
+
+    }
+    header input[type="checkbox"]:checked ~ ul{
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        margin-top: 0;
+        padding-top: 0;
+        transition: all ease 0.5s;
+
+    }
+}
+
+@media screen and (max-width:425px){
+    main{
+        background-color: burlywood;
+        min-height: 80vw;
+        margin-top: 6rem;
+    }
+    .maxi{
+        margin: 0.5rem 0;
+        width: 100vw;
+        height: 250px;
+        object-fit: cover;
+        object-position: center center;
+    }
+}

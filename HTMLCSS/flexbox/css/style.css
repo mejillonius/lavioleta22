@@ -1,0 +1,178 @@
+*, ::before, ::after, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.5rem;
+}
+body{
+    padding: 3rem;
+}
+img{
+    max-width: 100%;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 4rem;
+}
+p{
+    margin: 1.5rem;
+}
+
+ul{
+    padding:1rem 4rem;
+}
+.cambioCaja{
+    text-transform: lowercase;
+}
+.cambioCaja span{
+    text-transform: capitalize;
+}
+
+div{
+    color:white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 5rem;
+}
+
+.contenedor{
+    background-color: aquamarine;
+    border: 3px solid aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* height: 200px; */
+}
+.elemento{
+    width: 100px;
+    height: 100px;
+    margin:10px;
+    border: 2px solid darkorange;
+    background-color: orange;
+}
+
+.contenedor2{
+    background-color: aquamarine;
+    border: 3px solid aqua;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.element{
+    width: 100px;
+    height: 100px;
+    margin:10px;
+    border: 2px solid darkorange;
+    background-color: orange;
+}
+.contenedor3{
+    background-color: aquamarine;
+    border: 3px solid aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 300px;
+    align-items: flex-end;
+    overflow: hidden;
+    align-items: baseline;
+}
+.elemen{
+    width: 100px;
+    height: 100px;
+    margin:10px;
+    border: 2px solid darkorange;
+    background-color: orange;
+}
+.uno{
+    font-size: 5rem;
+    line-height: 10rem;
+    margin-top: 2rem;
+}
+.dos{
+    font-size: 1rem;
+    line-height: 10rem;
+    padding-top: 2rem;
+}
+.contenedor4{
+    background-color: aquamarine;
+    border: 3px solid aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 600px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+.eleme{
+    width: 100px;
+    height: 100px;
+    margin:10px;
+    border: 2px solid darkorange;
+    background-color: orange;
+}
+
+.flex-container{
+    background-color: aquamarine;
+    border: 3px solid aqua;
+    display: flex;
+    justify-content: center;
+    row-gap: 3rem;
+    column-gap: 3rem;
+}
+.flex-container>div{
+    background-color: orange;
+    border: 2px solid darkorange;
+    width: 100px;
+    text-align: center;
+    line-height: 4rem;
+
+    height: 100px;
+}
+div.orden{
+    order: 1;
+    background-color: lightcoral;
+    border: 2px solid red;
+}
+div.orden2{
+    order: -1;
+    background-color: lightcoral;
+    border: 2px solid red;
+}
+div.grow{
+    flex-grow: 1;
+    background-color: lightcoral;
+    border: 2px solid red;
+}
+div.grow2{
+    flex-grow: 3;
+    background-color: lightcoral;
+    border: 2px solid red;
+}
+div .shrink{
+    flex-shrink: 5;
+    background-color: lightcoral;
+    border: 2px solid red;
+}
+div.shrink2{
+    flex-shrink: 3;
+    background-color: lightcoral;
+    border: 2px solid red;
+}
+div.basis{
+    flex-basis: 50%;
+}
+div.paraladiv2 {
+    background-color: lightcoral;
+    border: 2px solid red;
+    flex: 1 1 200px;
+}
+div.paraladiv3 {
+    background-color: lightcoral;
+    border: 2px solid red;
+    flex: 0 2 400px;
+}
