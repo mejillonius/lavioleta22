@@ -1,0 +1,125 @@
+*, ::after, ::before{
+    margin: 0;
+}
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px; /* proporciones rem, determinamos la unidad desde un elemento en el que no se ve, las proporciones NO cambian con el dispositivo*/
+    width: 100vw;
+    min-height: 100vh;
+    font-size: 16px;
+}
+#cabecera{
+    /* div de la cabecera, debe verse negro y que ocupe el ancho de la pantalla */
+    width: 100vw;
+    height: 10rem;
+    background-color: black;
+    text-align: center;
+    overflow: hidden;
+}
+h1{
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+}
+section#viajes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+section.viajes-item{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 30rem;
+    box-sizing: border-box;
+}
+section.viajes-item img{
+    max-width: 100%;
+    order: 0;
+}
+section.viajes-item h2{
+    order: 1;
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+section.viajes-item p{
+    order: 2;
+    margin-top: 1rem;
+    align-self: flex-start;
+    height: 30vh;
+}
+section.viajes-item button{
+    order: 3;
+    width: 200px;
+}
+
+section.uno{
+    background-color: #c1d4e7;
+}
+
+section.dos{
+    background-color: #bdeebb;
+}
+section.tres{
+    background-color: #79a9a8;
+}
+
+@media screen and (min-width:768px){
+    /* tablet 2 arriba 1 abajo */
+    section#viajes{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section.viajes-item{
+        
+        flex-basis: 50%;
+    }
+    section.viajes-item p{
+        max-width: 50vw;
+    }
+    section.dos{
+        order:0;
+    }
+    section.uno{
+        order:1;
+    }
+    section.tres{
+        order:2;
+        flex-basis: 100vw;
+    }
+
+}
+
+@media screen and (min-width:1024px){
+    /* 3 en linea */
+    section#viajes{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-items: stretch;
+    }
+    section.viajes-item{
+        max-width: 34vw;
+    }
+    /* section.viajes-item p{
+        max-width: 20vw;
+    } */
+    section.dos{
+        order:1;
+    }
+    section.uno{
+        order:2;
+    }
+    section.tres{
+        order:0;
+    }
+
+
+}

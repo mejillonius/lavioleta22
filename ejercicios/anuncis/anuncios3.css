@@ -1,0 +1,72 @@
+*, ::after, ::before{
+    margin: 0;
+}
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px; /* proporciones rem, determinamos la unidad desde un elemento en el que no se ve, las proporciones NO cambian con el dispositivo*/
+    width: 100vw;
+    min-height: 100vh;
+    font-size: 16px;
+}
+body{
+    background-color: #f3fc83;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+h1{ 
+    /* la prensa */
+    background-color: #afaeae;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+}
+h2{
+    /* anuncios por palabras */
+    background-color: #cccccc;
+    border-bottom: 2px dashed black;
+    margin-bottom: 1rem;
+    text-align: right;
+    font-size: 1.6rem;
+}
+h3{
+    /* secciones */
+    background-color: #ddd8d8;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+h4{
+    /* titulo del anuncio */
+    background-color: #b9b5b5;
+    color: white;
+    text-align: right;
+    font-size: 1.1rem;
+    padding: 2px 2px 2px 0;
+}
+section{
+    /* cada seccion de anuncios */
+    border-left: 2px dashed black;
+    border-right: 2px dashed black;
+    padding: 4px;
+    max-width: 200px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+article{
+    /* cada anuncio individual */
+    border: 1px solid black;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+p{
+    margin: 5px 2px 2px 5px;
+    line-height: 1.2rem;
+}
