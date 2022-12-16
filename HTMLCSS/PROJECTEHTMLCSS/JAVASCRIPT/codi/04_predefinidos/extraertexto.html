@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>extraer texto con js</title>
+</head>
+<body>
+    <h1>extraer texto con js</h1>
+    <label for="texto">dame argo</label>
+    <input type="text" name="texto" id="texto">
+    <button id="extraer"> mandar </button>
+    <div id="mostra"></div>
+</body>
+<script>
+    // let texto = prompt("dame argo");
+    
+    const mostra= document.getElementById("mostra");
+    const botonazo = document.getElementById("extraer");
+    
+
+    botonazo.onclick = () => {
+        let extraido ="";
+        let texto = document.getElementById("texto").value;
+        if(texto.length > 10){
+            extraido = texto.substr(texto.length-5,5);
+        } else {
+            extraido = "mas de 10 caracteres";
+        }
+        mostra.innerHTML=extraido;
+    }
+
+    
+</script>
+</html>
