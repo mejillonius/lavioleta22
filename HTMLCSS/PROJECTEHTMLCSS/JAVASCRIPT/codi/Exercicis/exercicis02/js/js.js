@@ -9,6 +9,12 @@ const btnej12 = document.getElementById("botonEjercicio12");
 const clrej12 = document.getElementById("borraEjercicio12");
 const btnej13 = document.getElementById("botonEjercicio13");
 const clrej13 = document.getElementById("borraEjercicio13");
+const btnej14 = document.getElementById("botonEjercicio14");
+const clrej14 = document.getElementById("borraEjercicio14");
+const btnej15 = document.getElementById("botonEjercicio15");
+const clrej15 = document.getElementById("borraEjercicio15");
+const btnej16 = document.getElementById("botonEjercicio16");
+const clrej16 = document.getElementById("borraEjercicio16");
 
 
 
@@ -173,7 +179,51 @@ function ej13(){
     let nuevaVentana = window.open("","new", caracteristicas );
     nuevaVentana.document.write(documento);
 }
+/* funcion del ejercicio 14 */
+function ej14(){
+    let imagen = document.getElementById("bombilla");
+    let encendida = "imgs/encendida.gif";
+    let apagada = "imgs/apagada.gif";
+    let ruta = imagen.src.substr(imagen.src.length-16,16);
+    if (ruta == apagada){
+        imagen.src=encendida;
+    } else {
+        imagen.src=apagada;
+    }
+    
+}
+/* funcion del ejercicio 15 */
+function ej15(){
+    let texto = document.getElementById("ej15txt").value;
+    console.log(texto);
+    const divrespuesta = document.getElementById("ansEjercicio15");
+    let textoEnCursiva = `<p class="w3-cursive">${texto}</p>`;
+    let textoEnNegrita = `<p class="negrita">${texto}</p>`;
+    let textoEnRojo = `<p class="w3-text-red">${texto}</p>`;
+    let textoGrande = `<p class="w3-jumbo">${texto}</p>`;
+    let textoTachado = `<p class="tachado">${texto}</p>`;
+    divrespuesta.innerHTML = `${textoEnCursiva} ${textoEnNegrita} ${textoEnRojo} ${textoGrande} ${textoTachado}`;
 
+
+}
+/* funcion del ejercicio 16 */
+function ej16(){
+    const divrespuesta = document.getElementById("ansEjercicio16");
+    let alto = 2;
+    let ancho = 2;
+    let texto = "un texto";
+    let tabla = "<table>";
+
+    for (let i = 0; i < alto; i++) {
+        tabla += "<tr>";
+        for (let j = 0; j < ancho; j++) {
+            tabla += `<td>${texto}</td>`;
+        }
+        tabla += "</tr>";
+    }
+    tabla += "</table>";
+    divrespuesta.innerHTML = tabla;
+}
 
 /* declarando funciones de borrado de ejercicios */
 function clearej9() {
@@ -196,8 +246,24 @@ function clearej12() {
     divrespuesta.innerHTML = ``;
 }
 function clearej13(){
-    
+    return 0;
 }
+function clearej14(){
+    let imagen = document.getElementById("bombilla");
+    let apagada = "imgs/apagada.gif";
+    
+    imagen.src=apagada;
+}
+function clearej15(){
+    const divrespuesta = document.getElementById("ansEjercicio15");
+    document.getElementById("ej15txt").value = "";
+    divrespuesta.innerHTML = ``;
+}
+function clearej16(){
+    const divrespuesta = document.getElementById("ansEjercicio16");
+    divrespuesta.innerHTML = ``;
+}
+
 
 /* delcarando las acciones al pulsar el boton */
 
@@ -211,3 +277,9 @@ btnej12.onclick = ej12;
 clrej12.onclick = clearej12;
 btnej13.onclick = ej13;
 clrej13.onclick = clearej13;
+btnej14.onclick = ej14;
+clrej14.onclick = clearej14;
+btnej15.onclick = ej15;
+clrej15.onclick = clearej15;
+btnej16.onclick = ej16;
+clrej16.onclick = clearej16;
