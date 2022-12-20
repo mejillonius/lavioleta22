@@ -149,7 +149,29 @@ document.bgcolor= color; */
 }
 /* funcion del ejercicio 13 */
 function ej13(){
+    let alto = 500;
+    let ancho = 500;
+    let izquierda = 100;
+    let arriba = 100;
+    let caracteristicas = `height=${alto}, width=${ancho}, left=${izquierda},top=${arriba}, popup=yes`
+    let documento = `<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/w3.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Nueva ventana</title>
+    </head>
+    <body class="w3-container">
+        <h1>Esta es una nueva ventana</h1>
+        <p>esta ventana mide ${alto} x ${ancho} px y se ha abierto desde la ventana padre</p>
+    </body>
+    </html>`;
 
+    let nuevaVentana = window.open("","new", caracteristicas );
+    nuevaVentana.document.write(documento);
 }
 
 
@@ -174,7 +196,7 @@ function clearej12() {
     divrespuesta.innerHTML = ``;
 }
 function clearej13(){
-
+    
 }
 
 /* delcarando las acciones al pulsar el boton */
