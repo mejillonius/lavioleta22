@@ -15,6 +15,10 @@ const btnej15 = document.getElementById("botonEjercicio15");
 const clrej15 = document.getElementById("borraEjercicio15");
 const btnej16 = document.getElementById("botonEjercicio16");
 const clrej16 = document.getElementById("borraEjercicio16");
+const btnej17 = document.getElementById("botonEjercicio17");
+const clrej17 = document.getElementById("borraEjercicio17");
+const btnej18 = document.getElementById("botonEjercicio18");
+const clrej18 = document.getElementById("borraEjercicio18");
 
 
 
@@ -217,12 +221,39 @@ function ej16(){
     for (let i = 0; i < alto; i++) {
         tabla += "<tr>";
         for (let j = 0; j < ancho; j++) {
-            tabla += `<td>${texto}</td>`;
+            tabla += `<td contenteditable>${texto}</td>`;
         }
         tabla += "</tr>";
     }
     tabla += "</table>";
     divrespuesta.innerHTML = tabla;
+}
+/* funcion del ejercicio 17 */
+function ej17(){
+    const finDelMundo = new Date(2012,12,21,0,0);
+    const ahora = new Date();
+    const dia = ahora.getDate();
+    const mes = ahora.getMonth();
+    const anyo = ahora.getFullYear();
+    const hora = ahora.getHours();
+    const minutos = ahora.getMinutes();
+    const segundos = ahora.getSeconds();
+    const diaDeLaSemana = ahora.getDay();
+    const semana = ["lunes", "martes", "miercoles","jueves","viernes","sabado", "domingo"];
+    const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+    const divrespuesta = document.getElementById("ansEjercicio17");
+    divrespuesta.innerHTML = `<p>Los mayas van con un retraso de ${ahora-finDelMundo} milisegundos</p>
+    hoy es ${semana[diaDeLaSemana]}, dia ${dia} de ${meses[mes]} del año ${anyo} y son las ${hora} horas, ${minutos} minutos y ${segundos} segundos `;
+    
+    
+}
+
+/* funcion del ejercicio 18 */
+function ej18(){
+    const alto = Number(document.ej18.altura.value);
+    const ancho = Number(document.ej18.ancho.value);
+    const divrespuesta = document.getElementById("ansEjercicio18");
+    divrespuesta.innerHTML = `<p class="respuesta">el area es ${(alto*ancho)/2}</p>`;
 }
 
 /* declarando funciones de borrado de ejercicios */
@@ -263,6 +294,14 @@ function clearej16(){
     const divrespuesta = document.getElementById("ansEjercicio16");
     divrespuesta.innerHTML = ``;
 }
+function clearej17(){
+    const divrespuesta = document.getElementById("ansEjercicio17");
+    divrespuesta.innerHTML = ``;
+}
+function clearej18(){
+    const divrespuesta = document.getElementById("ansEjercicio18");
+    divrespuesta.innerHTML = ``;
+}
 
 
 /* delcarando las acciones al pulsar el boton */
@@ -283,3 +322,7 @@ btnej15.onclick = ej15;
 clrej15.onclick = clearej15;
 btnej16.onclick = ej16;
 clrej16.onclick = clearej16;
+btnej17.onclick = ej17;
+clrej17.onclick = clearej17;
+btnej18.onclick = ej18;
+clrej18.onclick = clearej18;
