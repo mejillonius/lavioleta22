@@ -19,6 +19,8 @@ const btnej17 = document.getElementById("botonEjercicio17");
 const clrej17 = document.getElementById("borraEjercicio17");
 const btnej18 = document.getElementById("botonEjercicio18");
 const clrej18 = document.getElementById("borraEjercicio18");
+const btnej19 = document.getElementById("botonEjercicio19");
+const clrej19 = document.getElementById("borraEjercicio19");
 
 
 
@@ -255,6 +257,24 @@ function ej18(){
     const divrespuesta = document.getElementById("ansEjercicio18");
     divrespuesta.innerHTML = `<p class="respuesta">el area es ${(alto*ancho)/2}</p>`;
 }
+/* funcion del ejercicio 19 */
+function ej19(){
+    const alto = Number(document.ej19.altura.value);
+    const ancho = Number(document.ej19.ancho.value);
+    const divrespuesta = document.getElementById("ansEjercicio19");
+    let texto = "un texto";
+    let tabla = "<table>";
+
+    for (let i = 0; i < alto; i++) {
+        tabla += "<tr>";
+        for (let j = 0; j < ancho; j++) {
+            tabla += `<td contenteditable>${texto}</td>`;
+        }
+        tabla += "</tr>";
+    }
+    tabla += "</table>";
+    divrespuesta.innerHTML = tabla;
+}
 
 /* declarando funciones de borrado de ejercicios */
 function clearej9() {
@@ -302,6 +322,12 @@ function clearej18(){
     const divrespuesta = document.getElementById("ansEjercicio18");
     divrespuesta.innerHTML = ``;
 }
+function clearej19(){
+    const divrespuesta = document.getElementById("ansEjercicio19");
+    document.ej19.altura.value = "";
+    document.ej19.ancho.value = "";
+    divrespuesta.innerHTML = ``;
+}
 
 
 /* delcarando las acciones al pulsar el boton */
@@ -326,3 +352,5 @@ btnej17.onclick = ej17;
 clrej17.onclick = clearej17;
 btnej18.onclick = ej18;
 clrej18.onclick = clearej18;
+btnej19.onclick = ej19;
+clrej19.onclick = clearej19;
