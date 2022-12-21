@@ -3,8 +3,8 @@ const m1 = document.querySelector("#mostra1");
 const m2 = document.querySelector("#mostra2");
 /* const m3 = document.querySelector("#mostra3");
 const m4 = document.querySelector("#mostra4");
-const m5 = document.querySelector("#mostra5");
-const m6 = document.querySelector("#mostra6"); */
+const m5 = document.querySelector("#mostra5"); */
+const m6 = document.querySelector("#mostra6");
 
 const formu = document.firstContact;
 const ptremail = /^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,9}$/;
@@ -39,6 +39,11 @@ const asunto = () => {
     if (!asunto.match(ptrasunto)) return false;
     return true;
 }
+const vCheck = () => {
+    let aceptar = formu.acepto.checked;
+    if (!aceptar) return false;
+    return true;
+};
 
 function pasaValor(e) {
     let result;
@@ -67,7 +72,16 @@ function pasaValor(e) {
                 asunto.style.border = "solid 2px red";
             }
             break;
-
+        case "acepto":
+            result = vCheck();
+            if (result) {
+                m6.innerHTML = "asunto correcto correcto.";
+                m6.style.color = "#068b3e";
+            } else {
+                m6.innerHTML = "longitud incorrecta";
+                m6.style.color = "#ff0000";
+            }
+            break;
     }
 }
 
@@ -76,7 +90,8 @@ const avisoReset = () => {
     reset ? location.reload(true): false; //esto es un ternario
 }
 
-formu.email.addEventListener("keyup", pasaValor);
-formu.asunto.addEventListener("keyup", pasaValor);
+
+formu.addEventListener("keyup", pasaValor);
+formu.acepto.addEventListener("click", pasaValor)
 formu.borrar.addEventListener("click",avisoReset);
 
