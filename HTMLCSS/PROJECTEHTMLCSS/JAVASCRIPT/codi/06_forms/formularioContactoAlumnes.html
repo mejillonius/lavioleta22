@@ -7,13 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
-        integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/w3.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class=w3-container">
 
         <h1>Contacta con nosotros</h1>
 
@@ -21,41 +19,41 @@
         </div>
 
         <form method="post" id="firstContact" name="firstContact" action="envio.php">
-            <fieldset class="form-group">
+            <fieldset class="">
                 <label for="email">Dirección de email</label>
-                <input type="text" class="form-control" id="email" name="email" value="">
-                <small id="mostra1" class="text-muted"></small>
+                <input type="text" class="w3-input" id="email" name="email" value="">
+                <small id="mostra1" class="">Dato requerido</small>
             </fieldset>
-            <fieldset class="form-group">
+            <fieldset class="">
                 <label for="asunto">Asunto</label>
-                <input type="text" class="form-control" id="asunto" name="asunto" value="">
-                <small id="mostra2" class="text-muted"></small>
+                <input type="text" class="w3-input" id="asunto" name="asunto" value="">
+                <small id="mostra2" class="">Dato requerido</small>
             </fieldset>
-            <fieldset class="form-group">
+            <fieldset class="">
                 <label for="miedad">Fecha de nacimiento:</label>
-                <input type="date" id="miedad" name="miedad" class="form-control" value="">
-                <small id="mostra4" class="text-muted"></small>
+                <input type="date" id="miedad" name="miedad" class="w3-input" value="">
+                <small id="mostra4" class="">Dato requerido</small>
             </fieldset>
-            <fieldset class="form-group">
+            <fieldset class="">
                 <label for="dni">Dni</label>
-                <input type="text" class="form-control" id="dni" name="dni" value="">
-                <small id="mostra5" class="text-muted"></small>
+                <input type="text" class="w3-input" id="dni" name="dni" value="">
+                <small id="mostra5" class="">Dato requerido</small>
             </fieldset>
 
-            <fieldset class="form-group">
+            <fieldset class="">
                 <label for="contenido">¿Qué te gustaría preguntarnos?</label>
-                <textarea class="form-control" id="contenido" name="contenido" rows="3" value=""></textarea>
-                <small id="mostra3" class="text-muted"></small>
+                <textarea class="w3-input" id="contenido" name="contenido" rows="5" cols="50" value=""></textarea>
+                <small id="mostra3" class="">Dato requerido</small>
             </fieldset>
-            <fieldset class="form-group">
+            <fieldset class="">
                 <label for="acepto">Acepto las condiciones del servicio</label>
                 <input name="acepto" type="checkbox" value="" />
-                <small id="mostra6" class="text-muted"></small>
+                <small id="mostra6" class="">Dato requerido</small>
             </fieldset>
 
-            <button type="submit" name="enviar" id="enviar" class="btn btn-primary">Enviar</button>
-            <button type="button" name="borrar" id="borrar" class="btn btn-secondary">Borrar
-                formulario</button>
+            <button type="button" name="borrar" id="borrar" class="w3-btn w3-gray">Borrar formulario</button>
+            <button type="submit" name="enviar" id="enviar" class="w3-btn w3-green">Enviar</button>
+
         </form>
 
     </div>
