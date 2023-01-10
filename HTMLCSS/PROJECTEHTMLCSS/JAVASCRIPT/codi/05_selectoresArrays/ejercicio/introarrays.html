@@ -15,7 +15,7 @@
     <div onclick="recorreMixto()">mixto</div>
 
     <script defer>
-        let primerArray = new Array(6);
+         let primerArray = new Array(6);
         primerArray[0] = 100;
         primerArray[1] = 300;
         primerArray[2] = 500;
@@ -112,6 +112,21 @@
                 document.write(`Indice: ${x} - Valor ${mixto[x]}<br>`);   
             }
         }
-    </script>
+    
+        let  hombres = ["Pablo", "Jose","Ganon"]; 
+        let  mujeres = ["Zelda","Lucia", "Zelda", "Gemma", 
+        "Zelda"]; 
+        let  humanos = hombres.concat(mujeres); 
+        console.log(humanos);
+        console.log(humanos.indexOf("Zelda"));
+        console.log(humanos.lastIndexOf("Zelda"));
+        let cmujeres = mujeres;
+        let ccmujeres = [...mujeres]
+
+        console.log(mujeres.pop());
+        console.log(mujeres);
+        console.log(cmujeres);
+        console.log(ccmujeres);
+   </script>
 </body>
 </html>
