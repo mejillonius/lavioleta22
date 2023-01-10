@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div id="mostra1"></div>
+    <div onclick="recorroArray()">muestra el array</div>
+    <div onclick="recorreAssoc()">asociativos</div>
+    <div onclick="recorreMixto()">mixto</div>
+
+    <script defer>
+        let primerArray = new Array(6);
+        primerArray[0] = 100;
+        primerArray[1] = 300;
+        primerArray[2] = 500;
+        primerArray[5] = 600;
+
+
+        console.log(primerArray);
+        document.write(primerArray + "<br>");
+        document.getElementById("mostra1").innerHTML = primerArray + "<br>";
+
+        let segundoArray = ["precio",300,500,,,600];
+        console.log(segundoArray);
+        document.write(segundoArray + "<br>");
+
+        let tercerArray = ["Uno","segundo", 90, 15, "cincuenta"];
+        console.log(tercerArray);
+        document.write(tercerArray + "<br>");
+
+        // console.time("for");
+        function recorroArray(){
+            let recorrido = ["Uno","segundo", 90, 15, "cincuenta"];
+            console.time("for");
+            document.write("for <br>");
+            for(let i=0; i<recorrido.length; i++){
+                console.log(`Indice: ${i} - Valor ${recorrido[i]}`);
+                document.write(`Indice: ${i} - Valor ${recorrido[i]}<br>`);
+            };
+            console.timeEnd("for");
+
+            console.time("forin");
+            document.write("for in <br>");
+            for (let x in recorrido){
+                console.log(`Indice: ${x} - Valor ${recorrido[x]}`);
+                document.write(`Indice: ${x} - Valor ${recorrido[x]}<br>`);               
+            };
+            console.timeEnd("forin");
+
+            console.time("forof");
+            document.write("for of <br>");
+            for(let y of recorrido){
+                console.log(`Indice: ${y} - Valor ${recorrido[y]}`);
+                document.write(`Indice: ${y} - Valor ${recorrido[y]}<br>`);               
+            }
+            console.timeEnd("forof");
+
+            console.time("foreach");
+            recorrido.forEach((element)=> {
+                document.write(
+                    `indice: ${element} Valor: ${element} <br>`
+                ); console.log(element);
+                }
+            )
+            console.timeEnd("foreach");
+        }
+
+        let nombre = "alf", consigna = "zumo de gato", tercerIndice = "extraterreste";
+        let asociativo1 = [nombre = "alf", consigna = "zumo de gato", tercerIndice = "extraterreste"];
+        console.log(asociativo1);
+        document.write(asociativo1 + "<br>");
+        let asociativo2 = {nombre : "alf", consigna : "zumo de gato", tercerIndice : "extraterreste"};
+        console.log(asociativo2);
+        document.write(asociativo2 + "<br>");
+
+        function recorreAssoc(){
+            console.log("entro");
+            let asso3 = {"nombre":"pedro", 
+                        "apellido": "gomez", 
+                        "edad": 25, 
+                        "boleano": true,
+                        "array" : [1,2,3,"cuatro"]
+                    };
+
+            for (const x in asso3) {
+                console.log(`Indice: ${x} - Valor ${asso3[x]}`);
+                document.write(`Indice: ${x} - Valor ${asso3[x]}<br>`);   
+            }
+        }
+
+        let mixto = [10,20,30,40,50];
+        mixto["nombre"] = "pedro";
+        mixto ["apellido"] = "sanchez";
+        mixto ["edad"] = 25;
+
+        console.log(mixto);
+
+        function recorreMixto(){
+            console.log("entro");
+            let mixto = [10,20,30,40,50];
+            mixto["nombre"] = "pedro";
+            mixto ["apellido"] = "sanchez";
+            mixto ["edad"] = 25;
+            for (const x in mixto) {
+                console.log(`Indice: ${x} - Valor ${mixto[x]}`);
+                document.write(`Indice: ${x} - Valor ${mixto[x]}<br>`);   
+            }
+        }
+    </script>
+</body>
+</html>
