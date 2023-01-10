@@ -50,6 +50,6 @@ function ejercicio2 (){
     return tabla;
 }
 
-ej2 = document.getElementById("ej2");
+document.querySelector("#ej2").innerHTML = crearTabla(ejercicio2());
 
 
