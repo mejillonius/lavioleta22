@@ -52,7 +52,7 @@ function ejercicio2 (){
 function ejercicio3 () {
     if (navigator.cookieEnabled){
         if (!window.confirm("para continuar usando la pagina debe aceptar las cookies")){
-            window.location.replace("http://www.w3schools.com");
+            window.location.href = "http://www.w3schools.com";
         }
     }
            
@@ -65,9 +65,11 @@ function borrartablaEj2(){
 } */
 
 function ejercicio4 () {
-    target = document.querySelector("#ej4");
-
-    
+    let nombre = "";
+    while (nombre == "" || nombre == null) {
+        nombre = prompt("Introduce un nombre para la pagina");
+    }
+    document.title= nombre.toUpperCase();
 }
 
 let ej2 = document.querySelector("#ej2");
