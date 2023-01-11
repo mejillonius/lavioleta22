@@ -28,7 +28,6 @@ function crearTabla(arrayDeLineas){
 function ejercicio2ii(){
     return window.location.href.split("/").pop().split(".").shift();
 }
-
 function ejercicio2 (){
     let tabla = [];
     let titulo = ["PROPIEDAD", "VALOR OBTENIDO CON JS"];
@@ -50,6 +49,23 @@ function ejercicio2 (){
     return tabla;
 }
 
-document.querySelector("#ej2").innerHTML = crearTabla(ejercicio2());
+function ejercicio3 () {
+    if (navigator.cookieEnabled){
+        if (!window.confirm("para continuar usando la pagina debe aceptar las cookies")){
+            window.location.replace("http://www.w3schools.com");
+        }
+    }
+           
+}
+/* function mostrarTablaEj2(){
+    document.querySelector("#ej2").innerHTML = crearTabla(ejercicio2());
+}
+function borrartablaEj2(){
+    document.querySelector("#ej2").innerHTML = "";
+} */
 
+document.querySelector("#ej2Show").addEventListener("click",() => document.querySelector("#ej2").innerHTML = crearTabla(ejercicio2()));
 
+document.querySelector("#ej2Hide").addEventListener("click",() => document.querySelector("#ej2").innerHTML = "");
+
+document.querySelector("#ej3").addEventListener("click",ejercicio3)
