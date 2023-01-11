@@ -64,8 +64,18 @@ function borrartablaEj2(){
     document.querySelector("#ej2").innerHTML = "";
 } */
 
-document.querySelector("#ej2Show").addEventListener("click",() => document.querySelector("#ej2").innerHTML = crearTabla(ejercicio2()));
+function ejercicio4 () {
+    target = document.querySelector("#ej4");
 
-document.querySelector("#ej2Hide").addEventListener("click",() => document.querySelector("#ej2").innerHTML = "");
+    
+}
+
+let ej2 = document.querySelector("#ej2");
+
+document.querySelector("#ej2Show").addEventListener("click",() => ej2.innerHTML = crearTabla(ejercicio2()));
+
+document.querySelector("#ej2Hide").addEventListener("click",() => ej2.innerHTML = "");
 
 document.querySelector("#ej3").addEventListener("click",ejercicio3)
+
+document.querySelector("#ej4Show").addEventListener("click", ejercicio4)
