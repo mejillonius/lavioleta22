@@ -19,25 +19,65 @@
             <li>Phasellus libero</li>
             <li>Maecenas nisl arcu</li>
         </ul>
-
+        <!-- <input type="text" name="texto" id="texto"> -->
         <input id="more" type="button" class="w3-button w3-white w3-border" value="Añadir elemento" />
         <input id="less" type="button" class="w3-button w3-white w3-border" value="Borrar elemento" />
+        <input id="armageddon" type="button" class="w3-button w3-white w3-border" value="Borrar todo" />
+
     </div>
     <script>
         let cont = 0;
+        let vis = 0
 
         const more = document.querySelector("#more");
         const less = document.querySelector("#less");
+        const armageddon = document.querySelector("#armageddon");
+        const division = document.querySelector(".w3-container");
+        
         const creaElemento = () => {
+            let text = document.querySelector("#texto");
 
+            if (vis == 0){
+                let campoTexto = document.createElement("input");
+                /*                 // Create a href attribute:
+                const att = document.createAttribute("href");
 
-            let elem = document.createElement("li");
-            let content = document.createTextNode("elemento de línea añadido");
-            let lista = document.querySelector("lista");
-            elem.appendChild(content);
-            lista.appendChild(elem);
+                // Set the value of the href attribute:
+                att.value = "https://www.w3schools.com";
 
-            cont++;
+                // Add the href attribute to an element:
+                element.setAttributeNode(att); */
+                /* tipo = campoTexto.createAttribute = "type";
+                tipo.value = "text";
+                nombre = campoTexto.createAttribute = "name";
+                nombre.value = "texto";
+                aidi = campoTexto.createAttribute = "id";
+                aidi.value = "texto";
+                console.log(campoTexto);
+                campoTexto.setAttributeNode(tipo);
+                campoTexto.setAttributeNode(nombre);
+                campoTexto.setAttributeNode(aidi); */
+                campoTexto.setAttribute("type", "text");
+                campoTexto.setAttribute("name", "texto");
+                campoTexto.setAttribute("id", "texto");
+
+                division.appendChild(campoTexto);
+                console.log(campoTexto);
+                vis = 1;
+            } else {
+                let elem = document.createElement("li");
+                if (text.value == "" || text.value == null){
+                    alert("el texto esta vacio!");
+                } else {
+                    let content = document.createTextNode(text.value);
+                    let lista = document.querySelector("#lista");
+                    elem.appendChild(content);
+                    lista.appendChild(elem);
+                    cont++;
+                    vis = 0;
+                    division.removeChild(division.lastChild);
+                }
+            }
 
         }
         const borraHijo = () => {
@@ -47,9 +87,17 @@
                 cont--;
             }
         }
+        const borraTodo = () => {
+            let list = document.getElementById("lista");
+            while (cont > 0) {
+                list.removeChild(list.lastChild);
+                cont--;
+            }
+        }
 
         less.addEventListener("click", borraHijo);
         more.addEventListener("click", creaElemento);
+        armageddon.addEventListener("click", borraTodo);
 
     </script>
 
