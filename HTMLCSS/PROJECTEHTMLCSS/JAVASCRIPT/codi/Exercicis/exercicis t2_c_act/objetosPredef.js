@@ -72,12 +72,25 @@ function ejercicio4 () {
     document.title= nombre.toUpperCase();
 }
 
+function ejercicio6 () {
+
+    let alto = 200 + Math.floor(Math.random()*301);
+    let ancho = 200 + Math.floor(Math.random()*301);
+    let url = "./ventana.html"
+    let parametros = `height=${alto}, width=${ancho}, scrollbars=yes`;
+    console.log(ancho, alto ,parametros);
+    nuevaventana = window.open(url, "_blank", parametros);
+}
+
+
 let ej2 = document.querySelector("#ej2");
 
 document.querySelector("#ej2Show").addEventListener("click",() => ej2.innerHTML = crearTabla(ejercicio2()));
 
 document.querySelector("#ej2Hide").addEventListener("click",() => ej2.innerHTML = "");
 
-document.querySelector("#ej3").addEventListener("click",ejercicio3)
+document.querySelector("#ej3").addEventListener("click",ejercicio3);
 
-document.querySelector("#ej4Show").addEventListener("click", ejercicio4)
+document.querySelector("#ej4Show").addEventListener("click", ejercicio4);
+
+document.querySelector("#ej6show").addEventListener("click", ejercicio6);

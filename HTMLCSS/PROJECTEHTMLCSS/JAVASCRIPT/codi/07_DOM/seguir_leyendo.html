@@ -27,9 +27,66 @@
         vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec,
         commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at,
         pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.
-        <a id="enlace1" href="#">Seguir leyendo</a>
+        <a id="enlace1" class="sigueLeyendo" href="#">Seguir leyendo</a>
 
-        <span id="adicional" class="oculto">Nullam sit
+        <span id="adicional1" class="oculto">Nullam sit
+            amet nisl elementum elit convallis
+            malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis
+            pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere
+            ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis
+            scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec
+            arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean
+            vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent idDonec lacus neque, vehicula in,
+            eleifend vitae, venenatis ac, felis. Donec
+            arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean
+            vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id
+            metus.</span>
+    </p>    
+    <p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim
+        vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec,
+        commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at,
+        pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.
+        <a id="enlace2" class="sigueLeyendo" href="#">Seguir leyendo</a>
+
+        <span id="adicional2" class="oculto">Nullam sit
+            amet nisl elementum elit convallis
+            malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis
+            pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere
+            ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis
+            scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec
+            arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean
+            vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent idDonec lacus neque, vehicula in,
+            eleifend vitae, venenatis ac, felis. Donec
+            arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean
+            vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id
+            metus.</span>
+    </p>    
+    <p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim
+        vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec,
+        commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at,
+        pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.
+        <a id="enlace3" class="sigueLeyendo" href="#">Seguir leyendo</a>
+
+        <span id="adicional3" class="oculto">Nullam sit
+            amet nisl elementum elit convallis
+            malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis
+            pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere
+            ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis
+            scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec
+            arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean
+            vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent idDonec lacus neque, vehicula in,
+            eleifend vitae, venenatis ac, felis. Donec
+            arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean
+            vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id
+            metus.</span>
+    </p>
+    <p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim
+        vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec,
+        commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at,
+        pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.
+        <a id="enlace3" class="sigueLeyendo" href="#">Seguir leyendo</a>
+
+        <span id="adicional3" class="oculto">Nullam sit
             amet nisl elementum elit convallis
             malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis
             pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere
@@ -43,8 +100,17 @@
             metus.</span>
     </p>
     <script>
+        const enlaces = document.querySelectorAll(".sigueLeyendo");
 
 
+        
+        for (let i = 0; i < enlaces.length; i++) {
+            const enlace = enlaces[i];
+            enlace.addEventListener("click", ()=> {
+                enlace.nextElementSibling.classList.toggle("oculto");
+            })
+        }
+        
 
     </script>
 </body>
