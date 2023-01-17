@@ -25,11 +25,19 @@ const nuevoitem = () => {
 const mostrar = () => {
   boton.onclick = nuevoitem;
   cajadatos.innerHTML = `<div><input type="button" onclick="eliminarTodo()" value="Eliminar Todo"></div>`;
-  for (let f = 0; f < localStorage.length; f++) {
+  for (const key in localStorage) {
+    if(!localStorage.getItem(key)){
+      continue;
+    }
+    let valor = localStorage.getItem(key);
+    cajadatos.innerHTML += `<div> ${key} - ${valor} <br><input type='button' onclick='eliminar("${key}")' value='Eliminar'></div>`;
+
+  }
+/*   for (let f = 0; f < localStorage.length; f++) {
     let clave = localStorage.key(f);
     let valor = localStorage.getItem(clave);
     cajadatos.innerHTML += `<div> ${clave} - ${valor} <br><input type='button' onclick='eliminar("${clave}")' value='Eliminar'></div>`;
-  }
+  } */
 };
 
 const eliminar = (clave) => {
