@@ -7,7 +7,4 @@ const ex1 = () => {
     ex1output.innerHTML = ex1input.value % 2 ? "es impar" : "es par";
 }
 
-
-
-
 ex1button.addEventListener("click",ex1);
