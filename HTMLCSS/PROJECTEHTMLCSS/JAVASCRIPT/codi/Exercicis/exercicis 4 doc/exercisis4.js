@@ -33,7 +33,7 @@ const ex1Muestra = () => {
 const ex1Borra = () => {
     ex1DivTarget.innerHTML = ``;
 }
-bh¡¡
+
 
 
 ex1BotonMostrar.addEventListener("click", ex1Muestra);
