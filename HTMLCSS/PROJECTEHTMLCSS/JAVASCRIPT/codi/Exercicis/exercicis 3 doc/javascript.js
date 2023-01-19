@@ -13,6 +13,8 @@ const ex4inputB = document.querySelector("#ex4 #ex4inB");
 const ex4inputC = document.querySelector("#ex4 #operador");
 const ex4button = document.querySelector("#ex4 button");
 const ex4output = document.querySelector("#ex4 p");
+const ex5button = document.querySelector("#ex5 button");
+const ex5output = document.querySelector("#ex5 div");
 
 
 const ex1 = () => {
@@ -77,7 +79,23 @@ const ex4 = () => {
     } 
 }
 
+const ex5 = () => {
+    let meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+    let conGuiones = ""
+    meses.forEach(mes => {conGuiones += `${mes} - `});
+    let conAsteriscos = ""
+    meses.forEach(mes => {conAsteriscos += `${mes} * `});
+
+    ex5output.innerHTML = `<h3>orden real</h3><p>${meses.toString()}</p>
+                            <h3>en orden alfabetico</h3><p>${[...meses].sort().toString()}</p>
+                            <h3>con guiones</h3><p>${conGuiones.substring(0,conGuiones.length -3)}</p>
+                            <h3>orden inverso</h3><p>${meses.reverse().toString()}</p>
+                            <h3>con asteriscos</h3><p>${conAsteriscos.substring(0,conAsteriscos.length -3)}</p>
+                            `;
+}
+
 ex1button.addEventListener("click",ex1);
 ex2button.addEventListener("click",ex2);
 ex3button.addEventListener("click",ex3);
 ex4button.addEventListener("click",ex4);
+ex5button.addEventListener("click",ex5);
