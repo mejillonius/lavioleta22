@@ -24,11 +24,17 @@ const ex1Muestra = () => {
     });
 
     document.querySelector(".desbloquear").addEventListener("click",()=>{
-        enlaces.forEach(enlace => {
-            enlace.removeEventListener("click",preventDefault());
-        });  
-    })
-}
+            enlaces.forEach(enlace => {
+            enlace.removeEventListener("click",function(event) {
+            event.preventDefault();
+            }
+            );  
+            }
+            ) 
+            }
+            );
+
+    }                                                         
 
 const ex1Borra = () => {
     ex1DivTarget.innerHTML = ``;
