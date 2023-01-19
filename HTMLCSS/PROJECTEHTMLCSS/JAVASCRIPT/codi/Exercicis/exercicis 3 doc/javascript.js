@@ -15,6 +15,8 @@ const ex4button = document.querySelector("#ex4 button");
 const ex4output = document.querySelector("#ex4 p");
 const ex5button = document.querySelector("#ex5 button");
 const ex5output = document.querySelector("#ex5 div");
+const ex6button = document.querySelector("#ex6 button");
+const ex6output = document.querySelector("#ex6 div");
 
 
 const ex1 = () => {
@@ -94,8 +96,29 @@ const ex5 = () => {
                             `;
 }
 
+const ex6 = () => {
+    datos = {
+        "producto1" : "0001",
+        "producto2" : "0002",
+        "producto3" : "0003",
+        "producto4" : "0004",
+        "producto5" : "0005",
+        "producto6" : "0006",
+        "producto7" : "0007",
+        "producto8" : "0008",
+        "producto9" : "0009"
+    };
+
+    output = "";
+    for (const ids in datos) {
+        output += `<p>${ids}-${datos[ids]}</p>`;
+    }
+    ex6output.innerHTML = output;
+}
+
 ex1button.addEventListener("click",ex1);
 ex2button.addEventListener("click",ex2);
 ex3button.addEventListener("click",ex3);
 ex4button.addEventListener("click",ex4);
 ex5button.addEventListener("click",ex5);
+ex6button.addEventListener("click",ex6);
