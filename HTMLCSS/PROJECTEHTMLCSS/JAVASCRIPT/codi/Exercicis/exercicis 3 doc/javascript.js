@@ -74,7 +74,7 @@ const ex4 = () => {
             break;
     }
     if (!isNaN(result)){
-        ex4output.innerHTML = `El precio del articulo es ${result}`;
+        ex4output.innerHTML = `El resultado es ${result}`;
     } else {
         
         ex4output.innerHTML = `hay un error en los datos introducidos`;
