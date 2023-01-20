@@ -21,6 +21,7 @@ const btnej18 = document.getElementById("botonEjercicio18");
 const clrej18 = document.getElementById("borraEjercicio18");
 const btnej19 = document.getElementById("botonEjercicio19");
 const clrej19 = document.getElementById("borraEjercicio19");
+const btnej14b = document.getElementById("botonEjercicio14b");
 
 
 
@@ -198,6 +199,18 @@ function ej14(){
     }
     
 }
+/* funcion del ejercicio 14 */
+const bombilla2 = () => {
+    let bombilla = document.getElementById("bombilla");
+    if (bombilla.src.match("apagada")) {
+      bombilla.src = "imgs/encendida.gif";
+    } else {
+      bombilla.src = "imgs/apagada.gif";
+    }
+  };
+
+
+
 /* funcion del ejercicio 15 */
 function ej15(){
     let texto = document.getElementById("ej15txt").value;
@@ -354,3 +367,5 @@ btnej18.onclick = ej18;
 clrej18.onclick = clearej18;
 btnej19.onclick = ej19;
 clrej19.onclick = clearej19;
+btnej14b.onclick = bombilla2;
+clrej14b.onclick = clearej14;

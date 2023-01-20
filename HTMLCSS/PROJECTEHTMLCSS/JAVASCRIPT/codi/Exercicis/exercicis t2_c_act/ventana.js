@@ -30,4 +30,4 @@ function muestraReloj() {
 /* console.log("totla");
 display_c(); */
 setInterval(muestraReloj, 1000);
-window.opener.location.href =  "https://www.w3schools.com";
+window.opener.location.href =  prompt("introduce una pagina web para redirigir la pagina padre", "https://www.w3schools.com");
