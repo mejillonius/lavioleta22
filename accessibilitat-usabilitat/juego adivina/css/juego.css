@@ -9,11 +9,15 @@
 
 :root{
     --tierra: #6F2D00;
-    --cesped: #7FFFD0;
+    --cesped: #00D1A0;
     --mar: #A0A0FD;
-    --mar2: #3a3abe;
+    --mar2: #02028D;
     --blanco: #ffffff;
     --negro: #000000;
+}
+
+.modal-header{
+    background-color: var(--mar2);
 }
 
 header{
@@ -28,17 +32,21 @@ h1{
 
 nav{
     width: 100%;
-    background-color: var(--mar);
+    background-color: var(--mar2);
     margin: 0;
 }
 nav ul li {
     display: inline;
-    color: #00D1A0;
-    background-color: #02028D;
+    color: var(--cesped);
 }
 main{
     background-color: var(--mar);
     
+}
+
+.contenido{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .isla{
@@ -49,6 +57,8 @@ main{
     margin: 20px;
     border: 5px solid var(--blanco);
 }
+
+
 
 
   
