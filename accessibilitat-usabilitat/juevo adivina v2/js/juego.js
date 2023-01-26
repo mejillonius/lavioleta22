@@ -22,17 +22,18 @@ const nuevoJuego = () => {
 const btnNombreOk = () => {
     let fnom = document.querySelector("#form_nombre");
     fnom.children.p1.innerHTML=`tu nombre es ${fnom.children.nombre.value}`
-    fnom.classList.toggle("collapse");
+    setTimeout(  () =>{ fnom.classList.toggle("collapse");
     document.querySelector("#form_min").classList.toggle("collapse");
-    numMin.focus();
+    numMin.focus()},1000);
+
 }
 
-const btnMinNext = () => {
+const btnMinOk = () => {
     let fmin = document.querySelector("#form_min");
     fmin.children.p2.innerHTML=`el mnimo es${fmin.children.num_min.value}`
-    fmin.classList.toggle("collapse");
+    setTimeout(()=>{fmin.classList.toggle("collapse");
     document.querySelector("#form_max").classList.toggle("collapse");
-    numMax.focus();
+    numMax.focus()},1000);
 }
 
 const btnMinBack = () => {
@@ -47,20 +48,21 @@ const btnMaxBack = () => {
 }
 
 
-const btnMaxNext=()=> {
+const empezarJuego=()=> {
     document.querySelector("#form_max").classList.toggle("collapse");
     minimo = Number(numMin.value);
     maximo = Number(numMax.value);
     target = Math.floor(Math.random()*(maximo-minimo)+1)+minimo;
     archipielago = "";
     for(let i = minimo; i<=maximo ; i++){
-        isla = `<div class="isla" tabIndex=1 >${i}</div>`;
+        isla = `<div class="isla" tabIndex=1>${i}</div>`;
         archipielago += isla;
     }
     contenido.innerHTML = archipielago;
     islas = document.querySelectorAll(".isla");
     islas.forEach(isla => {
         isla.addEventListener("click",()=>{
+            console.log("boton!");
             if (esLaCorrecta(isla.innerHTML)){
                 console.log("felicidades");
                 alert("felicidades");
@@ -107,6 +109,7 @@ const desdeAbajo = (islas, objetivo) => {
             if(isla.classList.contains("isla")){
                 isla.classList.toggle("isla");
                 isla.classList.toggle("nope");
+                
             }
         }
     });
@@ -148,13 +151,13 @@ botones.forEach(boton => {
                 btnMinBack();
                 break;
             case "btnMinNext":
-                btnMinNext();
+                btnMinOk();
                 break;
             case "btnMaxBack":
                 btnMaxBack();
                 break;
             case "btnMaxNext":
-                btnMaxNext();
+                empezarJuego();
                 break;
             default:
                 console.log("boton!");
