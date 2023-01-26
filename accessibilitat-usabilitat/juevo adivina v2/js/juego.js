@@ -3,6 +3,7 @@ const nombre = document.querySelector("#nombre");
 const numMin = document.querySelector("#num_min");
 const numMax = document.querySelector("#num_max");
 const contenido = document.querySelector(".contenido");
+const ariaCognitivo = document.querySelector("#formAyudaCognitivo");
 var target;
 var vnumMin;
 var vnumMax;
@@ -80,10 +81,15 @@ const esLaCorrecta = (texto) => {
 }
 
 const marronizar = (islas, objetivo) => {
-    if (direccion(objetivo)) {
-        desdeAbajo(islas,objetivo);
+    console.log(ariaCognitivo.checked)
+    if (ariaCognitivo.checked){
+        if (direccion(objetivo)) {
+            desdeAbajo(islas,objetivo);
+        } else {
+            desdeArriba(islas,objetivo);
+        }
     } else {
-         desdeArriba(islas,objetivo);
+        soloEsta (islas, objetivo);
     }
 }
 
@@ -115,6 +121,17 @@ const desdeArriba =  (islas, objetivo) => {
             }
         }
     });
+}
+
+const soloEsta = (islas, objetivo) => {
+    islas.forEach ( isla => {
+        if (Number(isla.innerHTML) == objetivo){
+            if(isla.classList.contains("isla")){
+                isla.classList.toggle("isla");
+                isla.classList.toggle("nope");
+            };           
+        }
+    })
 }
 
 botones.forEach(boton => {

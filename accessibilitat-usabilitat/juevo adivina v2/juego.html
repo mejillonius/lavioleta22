@@ -25,31 +25,35 @@
         </nav>
         <main>
             <p id="welcome">apreta nuevo juego para empezar a jugar</p>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="formAyudaCognitivo">
+              <label class="form-check-label" for="formAyudaCognitivo">Default switch checkbox input</label>
+            </div>
 
             
 
-              <fieldset id="form_nombre" class="collapse">
+              <div id="form_nombre" class="collapse">
                 <label for="nombre">introduce tu nombre</label>
                 <input type="text" name="nombre" id="nombre">
                 <p id="p1">esto es una prueba</p>
                 <button id="btnNombreOk" class="btn btn-primary boton">siguiente</button>
-              </fieldset>
+              </div>
 
-              <fieldset id="form_min" class="collapse">
-                <label class="form-label" for="num-min">Introduce el numero minimo</label>
+              <div id="form_min" class="collapse">
+                <label class="form-label" for="num_min">Introduce el numero minimo</label>
                 <input class="form-control form-control-lg" type="number" name="num_min" id="num_min" min="1" max="10" placeholder="introduce el minimo" step="1" inputmode="numeric" pattern="\d*">
                 <p id="p2">aqui no hay nada que ver</p>
                 <button id="btnMinBack" class="btn btn-primary boton">retroceder</button>
                 <button id="btnMinNext" class="btn btn-primary boton">siguente</button>
-              </fieldset>
+              </div>
 
-              <fieldset  id="form_max" class="collapse">
-                <label class="form-label" for="num-max">Introduce el numero maximo</label>
+              <div  id="form_max" class="collapse">
+                <label class="form-label" for="num_max">Introduce el numero maximo</label>
                 <input class="form-control form-control-lg" type="number" name="num_max" id="num_max" min="30" max="40" placeholder="introduce el maximo" step="1" inputmode="numeric" pattern="\d*">  
                 <p id="p3">fuegos artficiales de fondo</p>
                 <button id="btnMaxBack" class="btn btn-primary boton">retroceder</button>
                 <button id="btnMaxNext"  class="btn btn-primary boton">Empecemos el juego!</button>
-              </fieldset>
+              </div>
 
               
             
