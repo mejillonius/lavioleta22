@@ -12,10 +12,10 @@
 <body>
     <div class="container">
    
-        <header class="border-0">
+        <header class="">
             <h1>A&lt;div&gt;ina!</h1>
         </header>
-        <nav class="border-0">
+        <nav>
             <ul role="menubar">
                 <li role="menuitem"  id="menu-nuevo-juego"><button type="button" class="btn btn-primary boton" id="btnNuevoJuego">nuevo juego</button></li>
                 <li role="menuitem"  id="menu-nuevo-juego"><button type="button" class="btn btn-primary boton" id="btnEstadisticas">Estadsticas</button></li>
@@ -23,13 +23,27 @@
             </ul><!-- data-bs-toggle="modal" data-bs-target="#modal1" -->
         </nav>
         <main>
-            <p id="welcome">apreta nuevo juego para empezar a jugar</p>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="formAyudaCognitivo">
-              <label class="form-check-label" for="formAyudaCognitivo">Default switch checkbox input</label>
-            </div>
+            <p id="welcome">En este juego tendras que adivinar la casilla correcta, te dire si el numero es mayor o menor.</p>
 
-            
+              <div id="form_estadisticas" class="collapse">
+                <p id="PEstadsticas">
+                  TODO: tabla de puntuaciones.
+                </p>
+              </div>
+              
+              <div id="form_opciones" class="collapse">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="formAyudaCognitivo">
+                  <label class="form-check-label" for="formAyudaCognitivo">Modo facil (accesiblidad para logica)</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="formAyudaContraste">
+                  <label class="form-check-label" for="formAyudaContraste">Modo alto contraste (accesiblidad para invidentes)</label>
+                </div>
+                <label for="num_try">Numero de intentos (nivel de dificultad)</label>
+                <input class="form-control form-control-lg" type="number" name="num_try" id="num_try" value = "5" min="1" max="20" placeholder="5" step="1" inputmode="numeric" pattern="\d*">
+                <button type="button" class="btn btn-primary boton" id="btnGuardarOpciones">Guardar opciones</button>
+              </div>
 
               <div id="form_nombre" class="collapse">
                 <label for="nombre">introduce tu nombre</label>
@@ -61,7 +75,7 @@
         </main>
 
         <footer>
-            Webmaster y Contacto: <a href="info@agalarzo.com">Alberto Galarzo Torres</a> &copy; Alberto Galarzo torres 2023
+            Webmaster y Contacto: <a href="info@agalarzo.com">Alberto Galarzo Torres</a> &copy; Alberto Galarzo torres
         </footer>
     <script src="./js/juego.js"></script>
 </body>
