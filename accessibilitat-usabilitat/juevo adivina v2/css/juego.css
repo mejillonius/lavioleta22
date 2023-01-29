@@ -1,6 +1,6 @@
 *, ::before, ::after, html {
-    margin: 0;
-    padding: 0;
+    margin: 0 important;
+    padding: 0 important;
     font-family: 'Inter', sans-serif;
     font-size: 17px;
     line-height: 1.5rem;

@@ -4,14 +4,26 @@ const numMin = document.querySelector("#num_min");
 const numMax = document.querySelector("#num_max");
 const contenido = document.querySelector(".contenido");
 const ariaCognitivo = document.querySelector("#formAyudaCognitivo");
+const pMensajes = document.querySelector("#welcome");
+const num_try = document.querySelector("#num_try");
+const formAyudaContraste = document.querySelector("#formAyudaContraste");
+const masterCSS = document.querySelector("#masterCSS");
+const msgMenor = "La casilla es de un numero menor";
+const msgMayor = "La casilla es de un numero Mayor";
+const rutaAltoContraste = "./css/alto_contraste.css";
+const rutaMasterCSS = "./css/juego.css";
+
+
 var target;
 var vnumMin;
 var vnumMax;
 var intentos;
 
 
+
+
 const nuevoJuego = () => {
-    intentos = 5;
+    intentos = num_try.value;
     nombre.value = "Alberto";
     numMin.value = "5";
     numMax.value = "35";
@@ -26,7 +38,6 @@ const btnNombreOk = () => {
     document.querySelector("#form_min").classList.toggle("collapse");
     numMin.focus();
 }
-
 const btnMinNext = () => {
     let fmin = document.querySelector("#form_min");
     fmin.children.p2.innerHTML=`el mnimo es${fmin.children.num_min.value}`
@@ -34,7 +45,6 @@ const btnMinNext = () => {
     document.querySelector("#form_max").classList.toggle("collapse");
     numMax.focus();
 }
-
 const btnMinBack = () => {
     document.querySelector("#form_min").classList.toggle("collapse");
     document.querySelector("#form_nombre").classList.toggle("collapse");
@@ -45,7 +55,49 @@ const btnMaxBack = () => {
     document.querySelector("#form_max").classList.toggle("collapse");
     numMin.focus();
 }
+const btnEstadisticas = () => {
+    document.querySelector("#form_estadisticas").classList.toggle("collapse");
+}
+const btnOpciones = () => {
+    document.querySelector("#form_opciones").classList.toggle("collapse");
+}
+const btnGuardarOpciones = () => {
 
+    if (formAyudaContraste.checked){
+        masterCSS.href = rutaAltoContraste;
+    } else {
+        masterCSS.href = rutaMasterCSS;
+    }
+    intentos = num_try.value;
+    btnOpciones();
+}
+
+function pasaValor (e){
+    console.log(e);
+    console.log(e.srcElement.innerHTML);
+    switch (e.code) {
+        case "Space":
+        case "Enter":
+            actuTablero(e.srcElement.innerHTML);
+            break;
+        case "ArrowRight":
+            e.srcElement.nextElementSibling.focus();
+            break;
+        case "ArrowLeft":
+            e.srcElement.previousElementSibling.focus();
+    }
+
+}
+
+function actuTablero (numero) {
+    islas = document.querySelectorAll(".isla");
+    if (esLaCorrecta(numero)){
+        console.log("felicidades");
+        alert("felicidades");
+    } else {
+        marronizar(islas, numero);
+    }
+}
 
 const btnMaxNext=()=> {
     document.querySelector("#form_max").classList.toggle("collapse");
@@ -69,9 +121,9 @@ const btnMaxNext=()=> {
             }
             
         })
+        isla.addEventListener("keyup",pasaValor);
     });
 }
-
 const esLaCorrecta = (texto) => {
     if (target == texto){
         return true;
@@ -79,20 +131,22 @@ const esLaCorrecta = (texto) => {
         return false;
     }
 }
-
 const marronizar = (islas, objetivo) => {
-    console.log(ariaCognitivo.checked)
-    if (ariaCognitivo.checked){
-        if (direccion(objetivo)) {
-            desdeAbajo(islas,objetivo);
+    if (intentos > 0){
+        if (ariaCognitivo.checked){
+            if (direccion(objetivo)) {
+                desdeAbajo(islas,objetivo);
+            } else {
+                desdeArriba(islas,objetivo);
+            }
         } else {
-            desdeArriba(islas,objetivo);
+            soloEsta (islas, objetivo);
         }
+        intentos -= 1;
     } else {
-        soloEsta (islas, objetivo);
+        alert("juego terminado");
     }
 }
-
 const direccion = (objetivo) => {
     if (Number(objetivo) < target) {
         return true;
@@ -100,7 +154,6 @@ const direccion = (objetivo) => {
         return false;
     }
 }
-
 const desdeAbajo = (islas, objetivo) => {
     islas.forEach(isla => {
         if (Number(isla.innerHTML)<=objetivo){
@@ -111,32 +164,38 @@ const desdeAbajo = (islas, objetivo) => {
         }
     });
 }
-
 const desdeArriba =  (islas, objetivo) => {
     islas.forEach(isla => {
         if (Number(isla.innerHTML)>=objetivo){
             if(isla.classList.contains("isla")){
                 isla.classList.toggle("isla");
                 isla.classList.toggle("nope");
+                messenger(msgMenor);
             }
         }
     });
 }
-
 const soloEsta = (islas, objetivo) => {
     islas.forEach ( isla => {
         if (Number(isla.innerHTML) == objetivo){
             if(isla.classList.contains("isla")){
                 isla.classList.toggle("isla");
                 isla.classList.toggle("nope");
+                if (direccion (objetivo)) {
+                    messenger(msgMayor);
+                } else {
+                    messenger(msgMenor);
+                }
             };           
         }
     })
 }
-
+const messenger = (mensaje) => {
+    pMensajes.innerHTML = mensaje;
+}
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
-        console.log(boton);
+        /* console.log(boton); */
         switch (boton.id) {
             case "btnNuevoJuego":
                 nuevoJuego();
@@ -155,6 +214,15 @@ botones.forEach(boton => {
                 break;
             case "btnMaxNext":
                 btnMaxNext();
+                break;
+            case "btnEstadisticas":
+                btnEstadisticas();
+                break;
+            case "btnOpciones":
+                btnOpciones();
+                break;
+            case "btnGuardarOpciones":
+                btnGuardarOpciones();
                 break;
             default:
                 console.log("boton!");
