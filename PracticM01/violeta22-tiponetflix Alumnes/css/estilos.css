@@ -1,0 +1,15 @@
+/* Importar fonts */
+
+:root {
+  --rojo: #e50914;
+  --blanco: white;
+  --fondo: #141414;
+  --fontfamily: "Open Sans", sans-serif;
+  --logo: "Bebas Neue", cursive;
+  --fontsize: 17px;
+}
+
+html,
+body {
+  font-family: var(--fontfamily);
+}
