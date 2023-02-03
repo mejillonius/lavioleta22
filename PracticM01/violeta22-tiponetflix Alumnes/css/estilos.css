@@ -3,13 +3,59 @@
 :root {
   --rojo: #e50914;
   --blanco: white;
+  --gris: #aaaaaa;
+  --gris-oscuro: #222222;
   --fondo: #141414;
   --fontfamily: "Open Sans", sans-serif;
   --logo: "Bebas Neue", cursive;
   --fontsize: 17px;
 }
 
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   font-family: var(--fontfamily);
 }
+body{
+  background-color: var(--fondo);
+  color:var(--blanco);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header{
+  padding: 2rem 0;
+}
+header nav a {
+  color: var(--gris);
+  text-decoration: none;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  transition: all 0.4s ease;
+}
+
+header nav a:hover, header nav a.activo {
+  color: var(--rojo);
+  background-color: var(--gris-oscuro);
+  border-radius: 5px;
+}
+
+h2{
+  width: 90%;
+  margin: auto;
+}
+
+
+
