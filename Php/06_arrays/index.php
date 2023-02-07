@@ -55,3 +55,13 @@ $agenda = [
       ['nombre' => 'Jose', 'email' => 'masl@email.com',],
       'nombre' => 'Antonio',
 ];
+
+foreach ($agenda as $key => $value) {
+      if (is_array($value)){
+            foreach($value as $indice => $valor){
+                  echo $indice . " - " . $valor . "<br>";
+            }
+      }else{
+            echo $key . " - " . $value . "<br>";
+      }
+}
