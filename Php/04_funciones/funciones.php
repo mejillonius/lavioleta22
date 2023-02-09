@@ -122,3 +122,9 @@ echo "<br/><hr>";
 echo $saludodos();
 echo "<br/><hr>";
 $cognoms = "Peponez";
+
+
+/*funciones flecha o arrow functions */
+$saludar = fn() => "hola que tal: $nom $cognoms <br/>";
+echo $saludar;
+

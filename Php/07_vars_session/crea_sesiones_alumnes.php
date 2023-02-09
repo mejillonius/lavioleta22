@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 ?>
 
@@ -20,12 +21,12 @@
       <form class="container col-md-8 col-lg-4" action="envio_v_sesion.php" method="get">
             <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre:</label>
-                  <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Introduce tu nombre" value="">
+                  <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Introduce tu nombre" value="<?= isset($_SESSION['nombre']) ? $_SESSION['nombre'] : ""; ?>">
 
             </div>
             <div class="mb-3">
                   <label for="mail" class="form-label">Correo electrónico:</label>
-                  <input type="email" class="form-control" name="mail" id="mail" placeholder="nombre@dominio.com" value="">
+                  <input type="email" class="form-control" name="mail" id="mail" placeholder="nombre@dominio.com" value="<?= isset($_SESSION['mail']) ? $_SESSION['mail'] : ""; ?>">
             </div>
             <button type="reset" class="btn btn-danger">Reset</button>
             <input type="submit" value="Enviar" name="enviar">
