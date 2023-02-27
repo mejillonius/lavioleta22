@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/estilos.css">
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet">
+      <title>Netflix</title>
+</head>
+
+<body>
+      <div id="arriba">
+            <a href="#abajo"></a>
+      </div>
+      <header>
+            <div class="contenedor">
+                  <div class="logo">
+                        <a href="index.html">
+                              <img src="images/Netflix_2015_logo.svg" alt="logo netflix">
+                        </a>
+                  </div>
+                  <nav id="menu-muestra">
+                        <a href="#" class="activo">Mi lista</a>
+                        <a href="#">Más reciente</a>
+                        <a href="#">Películas</a>
+                        <a href="#">Programas</a>
+                        <a href="#">Inicio</a>
+                  </nav>
+                  <div id="burguer" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</div>
+
+                  <nav id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#" class="activo">Mi lista</a>
+                        <a href="#">Más reciente</a>
+                        <a href="#">Películas</a>
+                        <a href="#">Programas</a>
+                        <a href="#">Inicio</a>
+                  </nav>
+            </div>
+      </header>
+      <main>
+            <div class="main-movie">
+                  <div class="contenedor">
+                        <h2 class="titulo">Interestellar</h2>
+                        <p class="descripcion">
+                              Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano
+                              recientemente
+                              descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las
+                              inmensas
+                              distancias que tiene un viaje interestelar.
+                        </p>
+                        <button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+                        <button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
+                  </div>
+            </div>
+            <div class="recom-movies contenedor">
+                  <div class="cont-controls">
+                        <h3>Películas Recomendadas</h3>
+                        <div class="indicadores"></div>
+                  </div>
+                  <div class="main-container">
+                        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i
+                                    class="fas fa-angle-left"></i></button>
+                        <div class="contenedor-carousel">
+                              <div class="carousel">
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/1.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/2.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/3.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/4.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/5.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/6.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/7.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/1.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/2.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/3.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/1.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/2.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/3.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/4.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/5.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/6.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/7.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/1.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/2.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/3.png" alt=""></a>
+                                    </div>
+                                    <div class="pelicula">
+                                          <a href="#"><img src="images/4.png" alt=""></a>
+                                    </div>
+                              </div>
+                        </div>
+                        <button role="button" id="flecha-derecha" class="flecha-derecha"><i
+                                    class="fas fa-angle-right"></i></button>
+                  </div>
+            </div>
+            <button class="n-button hide"> <a href="#arriba">N</a></button>
+            <div class="contenedor">
+                  <section class="disfruta">
+                        <div class="disfruta-description">
+                              <h1 class="titulo">Disfruta de tu TV con <strong>Netflix.</strong></h1>
+                              <p class="descripcion">Disfruta desde tu smart TV , PlayStation, Xbox, Chromecast, Apple
+                                    TV,reproductores de Blu-ray y
+                        </div>
+                        <div class="video-tvpc">
+                              <img src="images/tv.png" alt="Netflix Images">
+                              <div>
+                                    <video id="video" src="images/video.m4v" autoplay muted loop></video>
+                              </div>
+                        </div>
+                  </section>
+            </div>
+            <div>
+                  <div class="border">
+                  </div>
+                  <div class="contenedor">
+                        <div class="disfruta disfruta-2">
+                              <picture>
+                                    <img src="images/mobile.jpg" alt="image netflix">
+                              </picture>
+                              <section class="disfruta-description">
+                                    <h2 class="titulo-2">Descarga tus programas favoritos para verlos fuera de línea.
+                                    </h2>
+                                    <p class="descripcion">Descarga tus programas favoritos para tenerlos siempre
+                                          disponibles.
+                                    </p>
+                              </section>
+                        </div>
+                  </div>
+                  <div class="border">
+                  </div>
+                  <div class="contenedor">
+                        <section class="disfruta">
+                              <div class="disfruta-description">
+                                    <h2 class="titulo-2">Míralos en cualquier sitio.</h2>
+                                    <p class="descripcion">Reproduce ilimitadas películas y programas de TV en el móvil,
+                                          tablet, ordenador y
+                                          TV.
+                                    </p>
+                              </div>
+                              <div class="video-tvpc">
+                                    <img src="images/tv-mobile.png" alt="image netflix">
+                                    <div>
+                                          <video id="video-2" src="images/video-2.m4v" autoplay muted loop></video>
+                                    </div>
+                              </div>
+                  </div>
+                  <div class="border">
+                  </div>
+            </div>
+            <div class="contenedor">
+                  <div class="disfruta disfruta-2">
+                        <picture>
+                              <img src="images/children.png" alt="children pictures">
+                        </picture>
+                        <section class="disfruta-description">
+                              <h2 class="titulo-2">Crea perfiles infantiles.</h2>
+                              <p class="descripcion">Un espacio solo para los críos, con programas de aventuras con sus
+                                    personajes
+                                    preferidos. Todo sin
+                                    permanencias..
+                              </p>
+                        </section>
+                  </div>
+            </div>
+            <div class="border">
+            </div>
+      </main>
+      <footer class="contenedor">
+            <div>
+                  <p>Dudas. Preguntas? llámanos <a href="tel:000-000-000-0000">000-000-000-0000</a></p>
+
+            </div>
+            <div>
+                  <div>
+                        <ul>
+                              <li><a href="#">Preguntas frecuentes</a></li>
+                              <li><a href="#">Relaciones con inversores</a></li>
+                              <li><a href="#">Privacidad</a></li>
+                              <li><a href="#">Test de velocidad</a></li>
+                        </ul>
+                  </div>
+                  <div>
+                        <ul>
+                              <li><a href="#">Centro de ayuda</a></li>
+                              <li><a href="#">Trabajo</a></li>
+                              <li><a href="#">Gesión de cookies</a></li>
+                              <li><a href="#">Noticias legales</a></li>
+                        </ul>
+                  </div>
+                  <div>
+                        <ul>
+                              <li><a href="#">Cuentas</a></li>
+                              <li><a href="#">Formas de ver</a></li>
+                              <li><a href="#">Información corporativa</a></li>
+                              <li><a href="#">Solo en Netflix</a></li>
+                        </ul>
+                  </div>
+                  <div>
+                        <ul>
+                              <li><a href="#">Media Center</a></li>
+                              <li><a href="#">Términos de uso</a></li>
+                              <li><a href="#">Contáctanos</a></li>
+                        </ul>
+                  </div>
+            </div>
+      </footer>
+      <script src="js/button.js"></script>
+      <script src="js/carousel.js"></script>
+      <script src="js/scroll.js"></script>
+      <script src="js/sidenav.js"></script>
+      <script src="https://kit.fontawesome.com/d80044a3f4.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

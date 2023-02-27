@@ -1,0 +1,472 @@
+@import "bootstrap";
+//Importar iconos bootstrap
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+//Importar fuente Open sans
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+//Importar bebas neue
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+//Variables
+$color1: $gray-200;
+$fuenteCuerpo: 'Open Sans', 'sans-serif';
+
+html, body {  
+    margin:0px;  
+    height:100%;  
+    font-family: $fuenteCuerpo;
+    
+}
+
+//Barra de inicio  
+header{
+    display:flex;
+    align-items: center;
+    min-height: 150px;
+    background-color: black;
+
+    .container-fluid{
+        padding-left: 60px;
+        padding-right: 60px;
+
+        ul{
+            li{
+                a{
+                    color: '#adb5bd';
+                }
+            }
+        }
+    }
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+
+    #contenedorBoton{
+        z-index: 99;
+    }
+
+    #navbarSupportedContent{
+        background-color: black;
+
+        .nav-link{
+            color: $gray-500;
+        }
+    }
+
+    .bi:hover{
+        color:red;
+    }
+}
+
+#contenedorImagen{
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+
+//Sección principal
+#principal{
+
+    .container-fluid:before {
+        content:'';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .container-fluid{
+        width: 100%;
+        background-image:url("../img/backdrop.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:center;
+        display: flex;
+
+        .row{
+            padding-bottom: 50px;
+            width: 100%;
+            h1, p{
+                color: $color1;
+                position: relative;
+                padding-right: 150px;
+            }
+            h1{
+                font-size: 75px;
+            }
+            p{
+                font-size: 20px;
+            }
+
+            button{
+                position: relative;
+                background-color: rgba(0, 0, 0, 0.641);
+                color: white;
+            }
+            button:hover{
+                background-color: rgba(128, 121, 121, 0.478);
+                color: $gray-500;
+            }
+        }
+        @media (max-width: 767px){
+            .row{
+                p{
+                    font-size: 1em;
+                    padding-right: 0px;
+                }
+                h1{
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}
+
+//Slider
+#seccionCarousel{
+    height:100%;
+    background-color: black;
+    #contenedorImagenes{
+        display: none;
+    }
+    .carousel-indicators{
+        justify-content: flex-end;
+        margin-right: 1em;
+        margin-bottom: 12%;
+        .active{
+            background-color: red;
+        }
+    }
+    h4{
+        color: white;
+        font-size: 1.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+   
+    .col-5{
+        width: 20%;
+        padding: 0;
+        img:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    .carousel-control-prev, .carousel-control-next{
+        background: rgba(0, 0, 0, 0.6);
+        width: 3%;
+        top: 28%;
+        height: 60%;
+    }
+
+
+
+    @media (max-width: 767px){
+        #carousel{
+            display: none;
+        }
+        #contenedorImagenes{
+            display: block;
+            height: 100%;
+            .row{
+                height: 100%;
+                .col{
+                    height: 100%;
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+                }
+            }
+        }
+    }
+}
+
+//Sección Disfruta Netflix
+#seccionDisfruta{
+    height: 400px;
+    background-color: black;
+
+    @media (max-width: 767px) {
+        .row{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            text-align: center;
+            .siete{
+                text-align: center;
+                padding-right: 0px;
+                padding-top: 25px;
+            }
+            .cinco{
+                height: 50%;
+                padding-top: 25px;
+                padding-bottom: 25px;
+
+                #video1{
+                    padding-bottom: 1.1em;
+                }
+            }
+            
+        }
+    }
+
+    .container-fluid{
+        height: 100%;
+
+        .row{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .siete{
+        align-self: center;
+        padding-right: 200px;
+        h2, p{
+            color: $color1;
+        }
+        p{
+            font-size: 1em;
+            }
+        }
+        h2{
+            font-size: 2em;
+        }
+        #netflix{
+            color: red;
+            font-family: 'Bebas Neue';
+            font-size: 2em;
+        }
+    }
+
+    /* @media (min-width: 767px) */
+    .cinco{
+        position: relative;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            position: absolute;
+            z-index: 25;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        video{
+            position:absolute;
+            z-index: 15;
+            width: 100%;
+            height: 65%;
+            object-fit: contain;
+            padding-bottom: 2.5em;
+        }
+    }
+
+
+//Sección Móvil
+
+#seccionMovil{
+    height: 400px;
+    background-color: black;
+
+    @media (max-width: 767px){
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            text-align: center;
+            
+            .siete{
+                height: 50%;
+                text-align: center;
+                padding-top: 2em;
+                p{
+                    margin-left: 0px;
+                }
+            }
+            .cinco{
+                height: 50%;
+                max-height: 200px;
+                padding-bottom: 2em;
+                img{
+                    max-height: 200px;
+                    object-fit: contain;
+                }
+            }
+
+        }
+    }
+    .container-fluid{
+        height: 100%;
+        .row{
+            height: 100%;
+        }
+    }
+
+    .siete{
+        align-self: center;
+
+        p{
+            margin-left: 100px;
+            color: $color1;
+            font-size: 1em;
+        }
+    }
+    .cinco{
+        max-height: 400px;
+        img{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+//Sección Móvil y PC
+#seccionPC{
+    height: 400px;
+    background-color: black;
+
+    .container-fluid{
+        height: 100%;
+
+        @media (max-width: 767px){
+            .row{
+                display: flex;
+                flex-wrap: wrap-reverse;
+                height: 100%;
+                text-align: center;
+
+                .siete{
+                    padding-right: 0px;
+                    p{
+                        padding-left: 0px;
+                    }
+                }
+                .cinco{
+                    video{
+                        margin-bottom: 1.8em;
+                        height: 50%;
+                    }
+                }
+            }
+        }
+
+        .row{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .siete{
+        align-self: center;
+        padding-right: 200px;
+
+        p{
+            color: $color1;
+            padding-left: 50px;
+            font-size: 1em;
+        }
+    }
+
+    .cinco{
+        position: relative;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        video{
+            position:absolute;
+            z-index: 1;
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+            margin-bottom: 7em;
+        }
+    }
+    @media (min-width: 1413px){
+        #video2{
+            width:40%;
+        }
+    }
+}
+
+//Sección infantiles
+#infantiles{
+    height: 400px;
+    background-color: black;
+
+    .container-fluid{
+        height: 100%;
+
+        @media (max-width: 767px){
+            .row{
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                
+                .siete{
+                    height: 50%;
+                    max-height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    p{
+                        margin-bottom: 0px;
+                    }
+                }
+                .cinco{
+                    height: 50%;
+                    max-height: 200px;
+                }
+            }
+        }
+
+        .row{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .siete{
+        align-self: center;
+
+        p{
+            margin-left: 100px;
+            margin-right: 50px;
+            color: $color1;
+            font-size: 1em;
+        }
+    }
+    .cinco{
+        height: 100%;
+        img{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+//Pie de página
+#piePagina{
+    padding-top: 10px;
+    padding-bottom: 25px;
+    background-color: black;
+
+    .row{
+        margin: 0 auto;
+
+    }
+
+    p, a {
+        color: #adb5bd;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,38 @@
+main {
+  width: 50%;
+  margin: auto;
+}
+.botoncillo {
+  width: 10%;
+}
+
+#mostra1 {
+  display: default;
+}
+#mostra2 {
+  display: none;
+}
+#mostra3 {
+  display: none;
+}
+#mostra4 {
+  display: none;
+}
+.alert {
+  height: 8px;
+}
+
+@media (max-width: 970px) {
+  main {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+  }
+  .botoncillo {
+    width: 20%;
+  }
+}

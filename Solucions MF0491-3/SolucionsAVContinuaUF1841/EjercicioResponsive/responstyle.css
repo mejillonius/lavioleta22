@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font: 18px Arial, sans-serif;
+}
+body {
+  background-image: url(images/bg.png);
+}
+header {
+  text-align: center;
+  padding: 25px;
+}
+main {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+article a {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 200px;
+  height: 200px;
+  background-image: url(images/bgButton.png);
+  background-size: cover;
+  font-size: 0.8rem;
+  margin: 2rem;
+}
+article img {
+  margin-bottom: 1rem;
+}

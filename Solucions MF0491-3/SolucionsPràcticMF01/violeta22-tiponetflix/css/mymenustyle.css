@@ -1,0 +1,191 @@
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  color: rgb(181, 176, 176);
+  padding: 7px 13px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.5s ease;
+}
+.responsive {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.topnav a:hover {
+  background-color: rgba(221, 221, 221, 0.121);
+  color: rgb(249, 5, 5);
+  transition: all 0.5s ease;
+}
+
+.topnav a.active {
+  color: white;
+  font-weight: 800;
+}
+.topnav .icon {
+  display: none;
+}
+.topnav a.icon#abrir {
+  display: none;
+}
+
+.topnav a.icon#cerrar {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .topnav a {
+    text-align: left;
+    padding: 7px 8px;
+  }
+}
+@media screen and (min-width: 10240px) {
+  .topnav .icon,
+  .topnav a.icon#abrir,
+  .topnav a.icon#cerrar {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon#abrir {
+    float: right;
+    display: block;
+    font-size: 25px;
+    line-height: 22px;
+    transition: all 0.5s ease;
+  }
+
+  .topnav a.icon#cerrar {
+    float: right;
+    font-size: 40px;
+    line-height: 22px;
+    transition: all 0.5s ease;
+  }
+
+  .topnav a.icon:hover {
+    color: rgb(249, 5, 5);
+    transition: all 0.5s ease;
+  }
+
+  .topnav.responsive {
+    position: relative;
+    transition: all 0.5s ease;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 22px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    transition: all 0.8s ease;
+  }
+  .topnav.responsive a:hover {
+    transition: all 0.8s ease;
+  }
+}
+/* @media screen and (max-width: 800px) {
+  .topnav a {
+    display: none;
+  }
+
+  .topnav a.icon#abrir {
+    float: right;
+    display: block;
+    font-size: 25px;
+    line-height: 22px;
+    transition: all 0.5s ease;
+  }
+
+  .topnav a.icon#cerrar {
+    float: right;
+    font-size: 40px;
+    line-height: 22px;
+    transition: all 0.5s ease;
+  }
+
+  .topnav a.icon:hover {
+    color: rgb(249, 5, 5);
+
+    transition: all 0.8s sease;
+  }
+
+  .topnav.responsive {
+    position: relative;
+    transition: all 0.5s ease;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+  }
+  .topnav.responsive a {
+    display: block;
+    text-align: left;
+    transition: 0.5s;
+  }
+  .topnav.responsive a:hover {
+    transition: 0.5s;
+  }
+} */
+/* ------------------------ */
+/* body {
+  font-family: "Lato", sans-serif;
+} */
+/* 
+.topnav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: -250px;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.topnav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.topnav a:hover {
+  color: #f1f1f1;
+}
+
+.topnav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .topnav {
+    padding-top: 15px;
+  }
+
+  .topnav a {
+    font-size: 18px;
+  }
+}
+ */

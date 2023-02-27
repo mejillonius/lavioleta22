@@ -1,0 +1,67 @@
+.accesibilidad{
+
+      background-color: black;
+      color: white;
+      h1{
+            font-size: 5.5rem;
+            line-height: 5rem;
+      }
+      h2{
+            font-size: 3.5rem; 
+            line-height: 5rem;
+      }
+      p{
+            font-size: 2rem;
+            line-height: 3rem;
+            margin: 2rem 0rem;
+      }
+      .form-text {
+            color: yellow;
+            font-size: 1rem;
+            font-weight: bold;
+      }
+      .btn-info,.btn-primary,.btn-secondary{
+            border: 1px solid white;
+            color: white;
+            background-color: black;
+            font-size: 1.5rem;
+            padding: 0.8rem;
+      }
+      .btn-info:hover,.btn-primary:hover,.btn-secondary:hover,.btn-info:active,.btn-primary:active,.btn-secondary:active,.btn-info:focus,.btn-primary:focus,.btn-secondary:focus{
+            border: 1px solid yellow;
+      }
+      .nav-link{
+            color: yellow;
+            font-size: 1.3rem;
+      }
+      .nav-link:hover,.nav-link:active,.nav-link:focus{
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 1.5rem;
+      }
+      .modal{
+            .modal-body{
+                  color: black;
+                  font-size: 2rem;
+                  min-height: 150px;
+            }
+            #titular_info_modal{
+                  font-size: 2rem;
+            }
+      }
+      .form-label{
+            font-size: 2rem;
+      }
+      .form-control,.card-header{
+            font-size: 2rem;
+      }
+      .bg-success{
+            background-color: #007B22;
+      }
+      .btn_juego{
+            width: 90px;
+            height: 90px;
+            font-size: 2rem;
+      }
+      
+}

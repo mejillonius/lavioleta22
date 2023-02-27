@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Netflix</title>
+      <link rel="stylesheet" href="css/mystyle.css">
+
+</head>
+<body>
+      
+      <header>
+            <div class="container-fluid">
+                  <div class="row">
+                        <div class="col-lg-2 col-md-5 col-sm-4 col-4">
+                              <div class="box_logo">
+                                    <a href="index.html">
+                                          <img src="images/logo.svg" class="img-fluid" alt="Logo de Netflix"> 
+                                    </a> 
+                              </div>
+                        </div>
+                        <div class="col-lg-10 col-md-7 col-sm-8 col-8 zone_menu">
+                              <nav class="navbar navbar-expand-lg">
+                                    <div class="container">
+                                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="btn_menu">
+                                                <i id="ico_hamburguesa" class="bi bi-list"></i>
+                                                <i id="ico_cerrar" class="bi bi-x hide_content"></i>
+                                          </button>
+                                          <div class="collapse navbar-collapse" id="navbarNav">
+                                                <ul class="navbar-nav">
+                                                      <li class="nav-item">
+                                                            <a class="nav-link" href="#">Mi Lista</a>
+                                                      </li>
+                                                      <li class="nav-item">
+                                                            <a class="nav-link" href="#">Más Recientes</a>
+                                                      </li>
+                                                      <li class="nav-item">
+                                                            <a class="nav-link" href="#">Películas</a>
+                                                      </li>
+                                                      <li class="nav-item">
+                                                            <a class="nav-link" href="#">Programas</a>
+                                                      </li>
+                                                      <li class="nav-item">
+                                                            <a class="nav-link" href="#">Inicio</a>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                              </nav>
+                        </div>
+                  </div>
+            </div>
+      </header>
+      
+      <main>
+            <!-- Datos de la Película -->
+            <section class="movie_detail">
+                  <div class="container-fluid">
+                        <div class="col">
+                              <h2>
+                                    Interestellar
+                              </h2>
+                              <p>
+                                    Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente
+                                descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas
+                                distancias que tiene un viaje interestelar.
+                              </p>
+                              <button class="btn btn_default"><i class="bi bi-play-circle-fill"></i> Reproducir</button>
+                              <button class="btn btn_default"><i class="bi bi-info-circle-fill"></i> Más información</button>
+                        </div>
+                  </div>
+            </section>
+            <!-- Slider películas -->
+            <section class="slider_peliculas">
+                  <div class="container-fluid">
+                        <h2>Películas recomendadas</h2>
+                        <div id="slider_netflix" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+                              <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#slider_netflix" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#slider_netflix" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#slider_netflix" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#slider_netflix" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#slider_netflix" data-bs-slide-to="4" aria-label="Slide 3"></button>
+                              </div>
+                              <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                          <div class="row">
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/1.png" alt="Película uno">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/2.png" alt="Película dos">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/3.png" alt="Película tres">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/4.png" alt="Película cuatro">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/5.png" alt="Película cinco">
+                                                      </a> 
+                                                </div>
+                                                
+                                          </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                          <div class="row">
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/7.png" alt="Película siete">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/2.png" alt="Película dos">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/1.png" alt="Película uno">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/3.png" alt="Película tres">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/5.png" alt="Película cinco">
+                                                      </a> 
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                          <div class="row">
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/6.png" alt="Película seis">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/3.png" alt="Película tres">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/4.png" alt="Película cuatro">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/1.png" alt="Película un">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/4.png" alt="Película cuatro">
+                                                      </a> 
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                          <div class="row">
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/1.png" alt="Película uno">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/2.png" alt="Película dos">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/3.png" alt="Película tres">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/4.png" alt="Película cuatro">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/5.png" alt="Película cinco">
+                                                      </a> 
+                                                </div>
+                                                
+                                          </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                          <div class="row">
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/7.png" alt="Película siete">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/2.png" alt="Película dos">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/1.png" alt="Película uno">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/3.png" alt="Película tres">
+                                                      </a> 
+                                                </div>
+                                                <div class="col">
+                                                      <a href="#">
+                                                            <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/5.png" alt="Película cinco">
+                                                      </a> 
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#slider_netflix" data-bs-slide="prev">
+                                    <i class="bi bi-chevron-left"></i>
+                                <span class="visually-hidden">Anterior</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#slider_netflix" data-bs-slide="next">
+                                    <i class="bi bi-chevron-right"></i>
+                                <span class="visually-hidden">Siguiente</span>
+                              </button>
+                        </div>
+                        <div class="grid_pelis_md d-md-none">
+                              <div class="row gx-4">
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/1.png" alt="Película uno">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/2.png" alt="Película dos">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/3.png" alt="Película tres">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/4.png" alt="Película cuatro">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/5.png" alt="Película cinco">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/6.png" alt="Película seis">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/7.png" alt="Película siete">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/1.png" alt="Película uno">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/2.png" alt="Película dos">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/3.png" alt="Película tres">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/4.png" alt="Película cuatro">
+                                          </a>
+                                    </div>
+                                    <div class="col-4">
+                                          <a href="#">
+                                                <img class="img-fluid" enlace_a_peli="http://localhost/netflix/index.html" src="images/5.png" alt="Película cinco">
+                                          </a>
+                                    </div>
+                              </div>
+                        </div>
+                        
+                  </div>
+
+
+            </section>
+
+            <!-- Secciónes de información -->
+            <section class="info_netflix">
+                  <div class="container-fluid">
+                        <div class="row row_reverse_xs">
+                              <div class="col-md-7 col-sm-12">
+                                    <div class="content_info_netflix">
+                                          <h1>Disfruta de tu TV con <span class="font_netflix">Netflix</span></h1>
+                                          <p>
+                                                Disfruta desde tu smart TV , PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y
+                          mucho más.
+                                          </p>
+                                    </div>
+                              </div>
+                              <div class="col-md-5 col-sm-12">
+                                    <div class="video_on_tv">
+                                          <img class="img-fluid" src="images/tv.png" alt="">
+                                          <video src="images/video.m4v" autoplay muted loop></video> 
+                                    </div> 
+                              </div>
+                        </div>
+                        <div class="row">
+                              <div class="col-md-5 col-sm-12">
+                                    <img class="img-fluid" src="images/mobile.jpg" alt="">
+                              </div>
+                              <div class="col-md-7 col-sm-12">
+                                    <div class="content_info_netflix">
+                                          <h2>
+                                                Descarga tus programas favoritos para verlos fuera de línea.
+                                          </h2>
+                                          <p>
+                                                Descarga tus programas favoritos para tenerlos siempre disponibles.
+                                          </p>
+                                    </div>       
+                              </div>
+                        </div>
+                        <div class="row row_reverse_xs">
+                              <div class="col-md-7 col-sm-12">
+                                    <div class="content_info_netflix">
+                                          <h2>
+                                                Míralos en cualquier sitio.
+                                          </h2>
+                                          <p>
+                                                Reproduce ilimitadas películas y programas de TV en el móvil, tablet, ordenador y TV.
+                                          </p>
+                                    </div>
+                              </div>
+                              <div class="col-md-5 col-sm-12">
+                                    <div class="video_on_tv2">
+                                          <img class="img-fluid" src="images/tv-mobile.png" alt="">
+                                           <video src="images/video-2.m4v" autoplay muted loop></video> 
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="row">
+                              <div class="col-md-5 col-sm-12">
+                                    <img class="img-fluid" src="images/children.png" alt="">
+                              </div>
+                              <div class="col-md-7 col-sm-12">
+                                    <div class="content_info_netflix">
+                                          <h2>
+                                                Crea perfiles invantiles.
+                                          </h2>
+                                          <p>
+                                                Un espacio solo para los críos, con programas de aventuras con sus personajes preferidos. Todo sin
+                    permanencias..
+                                          </p>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </section>
+
+      </main>
+
+      <!-- Botón subir arriba -->
+      <button class="btn btn-lg hide_content" id="btn_subir"><i class="bi bi-arrow-up-circle-fill"></i></button>
+      
+      
+
+      <footer>
+            <div class="container">
+                  <div class="row">
+                        <div class="col">
+                              <p>Dudas. Preguntas? llámanos <a href="tel:000-000-000-0000">000-000-000-0000</a></p>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-md-3 col-sm-6 col-6">
+                              <ul class="list-unstyled">
+                                    <li><a href="#">Preguntas frecuentes</a></li>
+                                    <li><a href="#">Relaciones con inversores</a></li>
+                                    <li><a href="#">Privacida</a></li>
+                                    <li><a href="#">Test de velocidad</a></li>
+                              </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-6">
+                              <ul class="list-unstyled">
+                                    <li><a href="#">Centro de ayuda</a></li>
+                                    <li><a href="#">Trabajo</a></li>
+                                    <li><a href="#">Gesión de cookies</a></li>
+                                    <li><a href="#">Noticias legales</a></li>
+                              </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-6">
+                              <ul class="list-unstyled">
+                                    <li><a href="#">Cuentas</a></li>
+                                    <li><a href="#">Formas de ver</a></li>
+                                    <li><a href="#">Información corporativa</a></li>
+                                    <li><a href="#">Solo en Netflix</a></li>
+                              </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-6">
+                              <ul class="list-unstyled">
+                                    <li><a href="#">Media Center</a></li>
+                                    <li><a href="#">Términos de uso</a></li>
+                                    <li><a href="#">Contáctanos</a></li>
+                              </ul>
+                        </div>
+                  </div>
+
+            </div>
+      </footer>
+
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.container {
+  padding: 3rem;
+}
+
+#mostra {
+  background-color: yellowgreen;
+  padding: 1rem;
+  margin: 2rem;
+  display: none;
+}
+
+.btn-secondary {
+  background-color: yellow;
+  color: black;
+}
+
+input[type="text"] {
+  border: 1px solid black;
+}

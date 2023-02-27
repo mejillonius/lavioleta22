@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio T3-ACT | 09</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+
+
+    <form>
+        <div class="form-group row">
+            <label for="plato1" class="col-sm-2 col-form-label">Primeros Platos</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="plato1" placeholder="primeros platos separados por ','">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="plato2" class="col-sm-2 col-form-label">Segundos Platos</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="plato2" placeholder="segundos platos separados por ','">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="postres" class="col-sm-2 col-form-label">Postres</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="postres" placeholder="postres separados por ','">
+            </div>
+        </div>
+    </form>
+    <a class="btn btn-primary" href="javascript:menuSemanal();">Muestra el menú</a>
+    <a class="btn btn-secondary" href="javascript:borrar();">borra listado</a>
+    <div class="row" id="mostra">
+
+    </div>
+    </div>
+    <script>
+        function menuSemanal() {
+            let menu = "";
+            let dias = ['#', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes'];
+            mdias = "";
+            let p = document.getElementById("plato1").value;
+            let primeros = p.split(",");
+            let s = document.getElementById("plato2").value;
+            let segundos = s.split(",");
+            let po = document.getElementById("postres").value;
+            let postres = po.split(",");
+            let platos = [primeros, segundos, postres];
+            console.log(primeros.length);
+            if (primeros.length != 5 || segundos.length != 5 || postres.length != 5) {
+                document.getElementById("mostra").innerHTML
+                    = "Debes completar 5 platos en cada campo separado por ','";
+            }
+            else {
+                for (let i = 0; i < dias.length; i++) { mdias += "<th scope='col'>" + dias[i] + "</th>"; }
+                menu += "<table class='table table-dark mt-4'><thead><tr>" + mdias + "</tr></thead>"; for (let i = 0; i < platos.length;
+                    i++) {
+                    let plato = '' + [i]; if (i == 0) { plato = 'Primeros'; } if (i == 1) { plato = 'Segundos'; } if (i == 2) {
+                        plato = 'Postres';
+                    } menu += "<tr>"; menu += "<th scope='row'>" + plato + "</th>"; for (let j = 0; j <
+                        platos[i].length; j++) { menu += "<td>" + platos[i][j] + "</td>"; } menu += "</tr>";
+                } menu += "</table>";
+                document.getElementById("mostra").innerHTML = menu;
+            }
+        } function borrar() { location.reload(true); }
+    </script>
+
+</body>
+
+</html>

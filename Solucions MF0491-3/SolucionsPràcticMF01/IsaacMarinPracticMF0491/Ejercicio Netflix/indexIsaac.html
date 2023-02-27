@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mystile.css">
+    <title>Netflix</title>
+</head>
+<body>
+    <header id="encabezado">
+        <!-- Menú navegación -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2" id="contenedorImagen">
+                    <img src="img/Netflix_2015_logo.svg" alt="Logo Netflix" class="img-fluid h-75">
+                </div>
+                <div class="col-10">
+                    <nav class="navbar navbar-expand-lg navbar-dark">
+                        <div class="" id="contenedorBoton">
+                          <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="botonMenu">
+                            <i class="bi bi-list" id="barras"></i>
+                            <i class="bi bi-x-lg" style="display:none" id="cerrar"></i>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Mi Lista</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Más recientes</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Películas</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Programas</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Inicio</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Inicio -->
+        <section id="principal">
+            <div class="container-fluid" id="contenedorInicio">
+                <div class="row align-items-end">
+                    <div class="col-12">
+                        <h1>Interstellar</h1>
+                        <p>Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales triulados y vencer las inmensas distancias que tiene un viaje interestelar.</p>
+                        
+                        <button type="button" class="btn botonInicio"><i class="bi bi-play-fill"></i>    Reproducir</button>
+                        <button type="button" class="btn botonInicio"><i class="bi bi-info-circle-fill"></i>    Más información</button>
+                    </div>             
+                </div>
+            </div>
+        </section>
+
+        <!-- Slider -->
+        <section id="seccionCarousel">
+            <div class="container-fluid">
+                <div class="row">
+                    <h4>Películas Recomendas</h4>
+                </div>                
+            </div>
+            <div class="carousel slide" id="carousel" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-5"><img class="img-fluid" src="img/1.png" alt="img1"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/2.png" alt="img2"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/3.png" alt="img3"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/4.png" alt="img4"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/5.png" alt="img5"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-5"><img class="img-fluid" src="img/6.png" alt="img6"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/7.png" alt="img7"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/3.png" alt="img8"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/4.png" alt="img9"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/5.png" alt="img10"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-5"><img class="img-fluid" src="img/1.png" alt="img11"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/2.png" alt="img12"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/3.png" alt="img13"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/7.png" alt="img14"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/5.png" alt="img15"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-5"><img class="img-fluid" src="img/3.png" alt="img16"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/5.png" alt="img17"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/7.png" alt="img18"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/6.png" alt="img19"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/2.png" alt="img20"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-5"><img class="img-fluid" src="img/1.png" alt="img21"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/4.png" alt="img22"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/6.png" alt="img23"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/2.png" alt="img24"></div>
+                            <div class="col-5"><img class="img-fluid" src="img/5.png" alt="img25"></div>
+                        </div>
+                    </div>
+                </div>
+                  <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev" data-bs-target="#carousel">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next" data-bs-target="#carousel">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                  </a>
+            </div>
+            <div class="container-fluid" id="contenedorImagenes">
+                <div class="row">
+                    <div class="col"><img class="img-fluid" src="img/1.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/2.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/3.png" alt="img1"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><img class="img-fluid" src="img/4.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/5.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/6.png" alt="img1"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><img class="img-fluid" src="img/7.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/4.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/1.png" alt="img1"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><img class="img-fluid" src="img/6.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/2.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/3.png" alt="img1"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><img class="img-fluid" src="img/7.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/1.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/6.png" alt="img1"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><img class="img-fluid" src="img/5.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/6.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/4.png" alt="img1"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><img class="img-fluid" src="img/3.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/1.png" alt="img1"></div>
+                    <div class="col"><img class="img-fluid" src="img/2.png" alt="img1"></div>
+                </div>   
+            </div>
+        </section>
+
+        <!-- Disfruta TV con Netflix -->
+        <section id="seccionDisfruta">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7 col-sm-12 siete">
+                        <h2><b>Disfruta de tu TV con</b></h2>
+                        <h2 id="netflix">NETFLIX.</h2>
+                        <p>Disfruta desde tu smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y mucho más.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-5 cinco">
+                        <img src="img/tv.png" alt="TV Netflix" class="img-fluid" id="imagen1">
+                        <video src="img/video.m4v" autoplay muted loop id="video1"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Móvil -->
+        <section id="seccionMovil">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 cinco">
+                        <img src="img/mobile.jpg" alt="Móvil" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 col-sm-12 siete">
+                        <p><b>Descarga tus programas favoritos para verlos fuera de línea.</b></p>
+                        <p>Descarga tus programas favoritos para tenerlos siempre disponibles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Móvil y PC -->
+        <section id="seccionPC">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7 col-sm-12 siete">
+                        <p><b>Míralos en cualquier sitio.</b></p>
+                        <p>Reproduce ilimitadas películas y programas de TV en el móvil, tablet, ordenador y TV.</p>
+                    </div>
+                    <div class="col-md-5 col-sm-12 cinco">
+                        <img src="img/tv-mobile.png" alt="PC Netflix" class="img-fluid">
+                        <video src="img/video-2.m4v" autoplay muted loop id="video2"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+        <!-- Infantiles -->
+        <section id="infantiles">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 cinco">
+                        <img src="img/children.png" alt="Niños" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 col-sm-12 siete">
+                        <p><b>Crea perfiles infantiles.</b></p>
+                        <p>Un espacio sólo para los críos, con programas de aventuras con sus personajes preferidos. Todo sin permanencias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer id="piePagina">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <p>Dudas. ¿Preguntas? Llámanos: 000-000-000-0000</p> 
+                </div>
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+                <div class="col-2">
+                    <a href="#" class="enlaceFooter">Preguntas Frecuentes</a><br>
+                    <a href="#" class="enlaceFooter">Relaciones con inversores</a><br>
+                    <a href="#" class="enlaceFooter">Privacidad</a><br>
+                    <a href="#" class="enlaceFooter">Test de velocidad</a>
+                </div>
+                <div class="col-2">
+                    <a href="#" class="enlaceFooter">Centro de ayuda</a><br>
+                    <a href="#" class="enlaceFooter">Trabajo</a><br>
+                    <a href="#" class="enlaceFooter">Gestión de Cookies</a><br>
+                    <a href="#" class="enlaceFooter">Noticias legales</a><br>
+                </div>
+                <div class="col-2">
+                    <a href="#" class="enlaceFooter">Cuentas</a><br>
+                    <a href="#" class="enlaceFooter">Formas de ver</a><br>
+                    <a href="#" class="enlaceFooter">Información Corporativa</a><br>
+                    <a href="#" class="enlaceFooter">Sólo en Netflix</a><br>
+                </div>
+                <div class="col-2">
+                    <a href="#" class="enlaceFooter">Media Center</a><br>
+                    <a href="#" class="enlaceFooter">Términos de uso</a><br>
+                    <a href="#" class="enlaceFooter">Contáctanos</a><br>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+
+    </footer>
+    
+
+
+
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/netflix.js"></script>
+
+</body>
+</html>

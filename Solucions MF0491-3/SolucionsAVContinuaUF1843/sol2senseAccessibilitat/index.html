@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Adivina adivinanza</title>
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+     <header class="w3-container w3-teal">
+          <h1 class="w3-animate-left">Adivinator</h1>
+     </header>
+     <main class="w3-container" id="principal">
+          <div id="mostra1" class="w3-margin-top">
+               <label class="w3-text-teal" for="text">Introduce tu nombre para empezar a jugar</label>
+               <input class="w3-input w3-border w3-light-grey" type="text" id="nombre" onkeyup="patterNombre()">
+               <div class="alert" id="alertName"></div>
+               <button id="btnNombre" type="button" class="w3-button w3-teal w3-margin-top" disabled>Aceptar</button>
+               <button onClick="location.reload()" type="button"
+                    class="w3-button w3-black w3-margin-top">Cancelar</button>
+          </div>
+
+          <div id="mostra2" class="w3-margin-top">
+               <h3 id="sub1" class="w3-container  w3-text-dark-gray"></h3>
+               <label class="w3-text-teal" for="number">Primero, introduce un número entre el 1 y el 10:</label>
+               <input class="w3-input w3-border w3-light-grey" type="number" id="num1" onkeyup="patterNum1()">
+               <div class="alert" id="alertNum1"></div>
+               <button id="btnNum1" class="w3-button w3-teal w3-margin-top" type="button" disabled>Continuar</button>
+               <button onClick="location.reload()" class="w3-button w3-black w3-margin-top"
+                    type="button">Cancelar</button>
+          </div>
+
+          <div id="mostra3" class="w3-margin-top">
+               <h3 id="sub2" class="w3-container w3-text-dark-gray"></h3>
+               <label class="w3-text-teal" for="number">Ahora, introduce un número entre el 30 y el 50:</label>
+               <input class="w3-input w3-border w3-light-grey" type="number" id="num2" onkeyup="patterNum2()">
+               <div class="alert" id="alertNum2"></div>
+               <button id="btnNum2" class="w3-button w3-teal w3-margin-top" type="button" disabled>Continuar</button>
+               <button onClick="location.reload()" class="w3-button w3-black w3-margin-top"
+                    type="button">Cancelar</button>
+          </div>
+
+          <div id="mostra4">
+               <h3 id="sub3" class="w3-container  w3-text-dark-gray"></h3>
+               <label class="w3-text-teal" for="number">Ahora tienes que adivinar en qué número estoy pensando de entre
+                    los dos que has dicho.</label>
+               <div id="botonsitos"></div>
+               <h3 id="sub4" class="w3-container  w3-text--dark-gray"></h3>
+          </div>
+     </main>
+
+
+     <script src="js/adivinator.js"></script>
+</body>
+
+</html>

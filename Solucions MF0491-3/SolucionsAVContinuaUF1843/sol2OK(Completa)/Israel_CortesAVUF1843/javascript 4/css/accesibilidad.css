@@ -1,0 +1,63 @@
+.accesibilidad {
+  background-color: black;
+  color: white;
+}
+.accesibilidad h1 {
+  font-size: 5.5rem;
+  line-height: 5rem;
+}
+.accesibilidad h2 {
+  font-size: 3.5rem;
+  line-height: 5rem;
+}
+.accesibilidad p {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin: 2rem 0rem;
+}
+.accesibilidad .form-text {
+  color: yellow;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.accesibilidad .btn-info, .accesibilidad .btn-primary, .accesibilidad .btn-secondary {
+  border: 1px solid white;
+  color: white;
+  background-color: black;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+}
+.accesibilidad .btn-info:hover, .accesibilidad .btn-primary:hover, .accesibilidad .btn-secondary:hover, .accesibilidad .btn-info:active, .accesibilidad .btn-primary:active, .accesibilidad .btn-secondary:active, .accesibilidad .btn-info:focus, .accesibilidad .btn-primary:focus, .accesibilidad .btn-secondary:focus {
+  border: 1px solid yellow;
+}
+.accesibilidad .nav-link {
+  color: yellow;
+  font-size: 1.3rem;
+}
+.accesibilidad .nav-link:hover, .accesibilidad .nav-link:active, .accesibilidad .nav-link:focus {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+.accesibilidad .modal .modal-body {
+  color: black;
+  font-size: 2rem;
+  min-height: 150px;
+}
+.accesibilidad .modal #titular_info_modal {
+  font-size: 2rem;
+}
+.accesibilidad .form-label {
+  font-size: 2rem;
+}
+.accesibilidad .form-control, .accesibilidad .card-header {
+  font-size: 2rem;
+}
+.accesibilidad .bg-success {
+  background-color: #007B22;
+}
+.accesibilidad .btn_juego {
+  width: 90px;
+  height: 90px;
+  font-size: 2rem;
+}/*# sourceMappingURL=accesibilidad.css.map */

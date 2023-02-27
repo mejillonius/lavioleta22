@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Semanal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+        #container {
+            padding: 3rem;
+        }
+
+        #mostra {
+            background-color: yellow;
+            padding: 1rem;
+            display: none;
+        }
+
+        .btn-secondary {
+            background-color: yellow;
+            color: black;
+
+        }
+
+        input[type=text] {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+
+        function menuSemanal() {
+            let primeros = [];
+            let segundos = [];
+            let postres = [];
+            let platos = [primeros, segundos, postres];
+
+
+            let relleno = "";
+            let x;
+            for (let i = 0; i <= 4; i++) {
+                x = prompt("Escriu un entrant");
+                primeros[i] = x;
+            }
+            for (let j = 0; j <= 4; j++) {
+                relleno += primeros[j] + ", ";
+            }
+            primeros = [relleno];
+
+            relleno = "";
+            for (let i = 0; i <= 4; i++) {
+                x = prompt("Escriu un segon");
+                segundos[i] = x;
+            }
+            for (let j = 0; j <= 4; j++) {
+                relleno += segundos[j] + ", ";
+            }
+            segundos = [relleno];
+
+            relleno = "";
+            for (let i = 0; i <= 4; i++) {
+                x = prompt("Escriu un postre");
+                postres[i] = x;
+            }
+            for (let j = 0; j <= 4; j++) {
+                relleno += postres[j] + ", ";
+            }
+            postres = [relleno];
+
+
+            document.write("<table style='color:#666;padding:10px;font-family:Arial;line-height:25px'><tr style='padding:5px;'><th colspan='6' style='background-color:yellow;padding:5px;'>Menú Semanal</th></tr>");
+            for (let i = 0; i < platos.length; i++) {
+                let plato = '' + [i];
+                if (i == 0) { plato = 'Primeros'; }
+                if (i == 1) { plato = 'Segundos'; }
+                if (i == 2) { plato = 'Postres'; }
+                document.write("<tr>");
+                document.write("<th style='background-color:#ccc;padding:5px;'>" + plato + "</th>");
+                for (let j = 0; j < platos[i].length; j++) {
+                    document.write("<td style='padding:5px;border:1px solid #ccc;'>" + platos[i][j] + "</td>")
+                }
+                document.write("</tr>");
+
+            }
+            document.write("</table>");
+        };
+        function borrar() {
+            location.reload(true);
+        };
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <a class="btn btn-primary" href="javascript:menuSemanal();">Crea el menú</a>
+        <a class="btn btn-secondary" href="javascript:borrar();">Elimina</a>
+
+        <div id="mostra"></div>
+    </div>
+
+</body>
+
+</html>

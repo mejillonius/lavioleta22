@@ -1,0 +1,73 @@
+// Importar Bootstrap
+@import "bootstrap";
+@import "accesibilidad";
+
+.cuerpo_principal{
+      h1{
+            text-align: center;
+      }
+     
+}
+#btn_mostrar_listado_persona{
+      display: none;
+}
+.mostrar_elemento{
+      display: block !important;
+}
+.hide_content{
+      display: none !important;
+}
+.prueba{
+      background-color: red;
+      color: black;
+}
+#main_content ,body{
+      min-height: 100vh;
+      width: 100vw;
+}
+.btn_juego{
+      background-color: cornflowerblue;
+      color: white;
+      margin: 1rem;
+      width: 50px;
+      border: 1px solid cornflowerblue;
+}
+.btn_juego:hover,.btn_juego:active,.btn_juego:focus{
+      background-color: white;
+      color: cornflowerblue;
+      border: 1px solid cornflowerblue;
+}
+#titular_info_modal{
+      color: white;
+}
+#btn_accesibilidad{
+      position: fixed;
+      top: 70px;
+      right: 40px;
+      font-size: 4rem;
+      color: white;
+      font-weight: bold;
+      background-color: #007B22;
+      border: 2px solid #007B22;
+}
+
+main{
+      margin-top: 5rem;
+}
+#principio{
+      position: fixed;
+      top: 0px;
+      left: 0px;
+}
+#btn_subir{
+      position: fixed;
+      bottom: 70px;
+      right: 40px;
+      color: white;
+      font-weight: bold;
+      background-color: #007B22;
+      border: 2px solid #007B22;
+      font-size: 4rem;
+}
+
+

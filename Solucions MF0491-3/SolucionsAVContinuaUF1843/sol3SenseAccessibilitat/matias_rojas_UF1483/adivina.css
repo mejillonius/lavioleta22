@@ -1,0 +1,53 @@
+
+
+ .cuadros{
+     background-color: teal;
+    width: 80px;
+    height: 80px;
+    color: white;
+    font-size: 30px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 5px 7px 10px black;
+    border:none; 
+} 
+.cuadros2{
+    
+    width: 80px;
+    height: 80px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.cuadros:hover{
+    background-color: rgb(25, 206, 206);
+    font-size: 55px;
+}
+span{
+    text-align: center;
+    
+} 
+.numeros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.numeros:hover{
+    font-size: 35px;
+}
+header{
+    border-top:solid 10px teal;
+    border-bottom:solid 10px teal;
+   padding: 30px;
+   margin-bottom: 20px;
+    
+   
+}
