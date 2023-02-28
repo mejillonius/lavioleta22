@@ -61,17 +61,17 @@ CREATE TABLE DEPARTAMENT2 (
 
 CREATE TABLE PRODUCTE (
     idproducto INT(4) PRIMARY KEY,
-    nom VARCHAR(20),
+    nom VARCHAR(20) NOT NULL,
     descripcio VARCHAR (100),
-    catecoria VARCHAR(20),
-    preu DECIMAL(4,2),
-    fabricant INT(4),
+    catecoria VARCHAR(20) NOT NULL,
+    preu DECIMAL(4,2) NOT NULL,
+    fabricant INT(4) NOT NULL,
     FOREIGN KEY (fabricant) REFERENCES FABRICANT(idfabricant)
 );
 
 CREATE TABLE FABRICANT (
     idfabricant INT(4) PRIMARY KEY,
-    nom VARCHAR(20),
+    nom VARCHAR(20) NOT NULL,
     web VARCHAR(20),
     telefon VARCHAR(20)
 );
@@ -82,14 +82,14 @@ CREATE TABLE FABRICANT (
 
 CREATE TABLE ASIGNATURA (
     codi CHAR (3) PRIMARY KEY,
-    nom VARCHAR(20),
+    nom VARCHAR(20) NOT NULL,
     cicle VARCHAR(20),
     curs VARCHAR(20)
 );
 
 CREATE TABLE PROFESOR (
     codi CHAR (3) PRIMARY KEY,
-    nom VARCHAR(20),
+    nom VARCHAR(20) NOT NULL,
     cognoms VARCHAR(20),
     data_naixement DATE,
     telefon VARCHAR(20),
@@ -98,25 +98,25 @@ CREATE TABLE PROFESOR (
 
 CREATE TABLE ALUMNE (
     codi CHAR (3) PRIMARY KEY,
-    nom VARCHAR(20),
+    nom VARCHAR(20) NOT NULL,
     cognoms VARCHAR(20),
     data_naixement DATE,
     telefon VARCHAR(20),
     adressa VARCHAR(20),
-    primera_matricula DATE
+    primera_matricula DATE NOT NULL
 );
 
 CREATE TABLE ESTUDIA (
-    alumne CHAR (3),
-    asignatura CHAR (3),
+    alumne CHAR (3) NOT NULL,
+    asignatura CHAR (3) NOT NULL,
     PRIMARY KEY (alumne, asignatura),
     FOREIGN KEY (alumne) REFERENCES ALUMNE(codi),
     FOREIGN KEY (asignatura) REFERENCES ASIGNATURA(codi)
 );
 
 CREATE TABLE ENSEÑA (
-    profesor CHAR (3),
-    asignatura CHAR (3),
+    profesor CHAR (3) NOT NULL,
+    asignatura CHAR (3) NOT NULL,
     PRIMARY KEY (profesor, asignatura),
     FOREIGN KEY (profesor) REFERENCES PROFESOR(codi),
     FOREIGN KEY (asignatura) REFERENCES ASIGNATURA(codi)
