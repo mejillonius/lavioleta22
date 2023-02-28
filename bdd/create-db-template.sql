@@ -1,3 +1,4 @@
+-- Active: 1675263800707@@127.0.0.1@3306@institut
 DROP DATABASE IF EXISTS institut;
 CREATE DATABASE institut DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 USE institut;
@@ -68,3 +69,16 @@ alter table via change descripcio ccc SMALLINT;
 alter table via rename via_access;
 
 
+CREATE TABLE materia
+       (codi_materia 
+INT AUTO_INCREMENT PRIMARY KEY,
+       materia VARCHAR(20),
+       departament VARCHAR(20)
+       );
+
+SHOW INDEX FROM materia;
+ALTER TABLE materia MODIFY materia VARCHAR(20) UNIQUE; SHOW INDEX FROM materia;
+CREATE INDEX xdepartament ON materia (departament); SHOW INDEX FROM materia;
+
+drop INDEX xdepartament on materia;
+drop index materia on materia;

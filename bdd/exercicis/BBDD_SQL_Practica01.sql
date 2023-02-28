@@ -1,8 +1,7 @@
 /* ejercicio 1*/
 CREATE DATABASE practica01 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 use practica01;
-
-DROP DATABASE 'practica01';
+/* DROP DATABASE 'practica01'; */
 
 
 CREATE TABLE TREBALL (
@@ -83,14 +82,14 @@ CREATE TABLE FABRICANT (
 CREATE TABLE ASIGNATURA (
     codi CHAR (3) PRIMARY KEY,
     nom VARCHAR(20) NOT NULL,
-    cicle VARCHAR(20),
-    curs VARCHAR(20)
+    cicle VARCHAR(20) NOT NULL,
+    curs SMALLINT(1)
 );
 
 CREATE TABLE PROFESOR (
     codi CHAR (3) PRIMARY KEY,
     nom VARCHAR(20) NOT NULL,
-    cognoms VARCHAR(20),
+    cognoms VARCHAR(20) NOT NULL,
     data_naixement DATE,
     telefon VARCHAR(20),
     adressa VARCHAR(20)
@@ -99,7 +98,7 @@ CREATE TABLE PROFESOR (
 CREATE TABLE ALUMNE (
     codi CHAR (3) PRIMARY KEY,
     nom VARCHAR(20) NOT NULL,
-    cognoms VARCHAR(20),
+    cognoms VARCHAR(20) NOT NULL,
     data_naixement DATE,
     telefon VARCHAR(20),
     adressa VARCHAR(20),
