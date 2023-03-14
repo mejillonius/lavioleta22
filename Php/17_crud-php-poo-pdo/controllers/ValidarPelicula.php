@@ -9,9 +9,9 @@ class ValidarPelicula
             $errores['title'] = "Campo requerido";
         }
         //...
-        if () {
+/*         if () {
          
-        }
+        } */
         return $errores;
     }
 }
