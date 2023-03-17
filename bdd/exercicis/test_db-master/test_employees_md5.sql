@@ -1,3 +1,4 @@
+-- Active: 1675263800707@@127.0.0.1@3306@empresa
 --  Sample employee database 
 --  See changelog table for details
 --  Copyright (C) 2007,2008, MySQL AB
