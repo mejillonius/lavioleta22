@@ -35,7 +35,7 @@
                   padding: 5px;
             }
       </style>
-      <script src=""></script>
+      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
 </head>
 
@@ -45,7 +45,44 @@
       </div>
       <div class='tecla' id='btnEnviar'>Send</div>
       <div id='results'>Results here...</div>
-      <script></script>
+      <script> 
+      $(function () {
+            $("#btnEnviar").click(function(){
+                  $('waiting').slideDown("fast");
+
+                  $.ajax({
+                        url:"server/server-xml.php",
+                        method:"POST",
+                        data:{
+                              query:"//mondial/country/name"
+                        },
+                        success:function(data){
+                              $('#waiting').slideUp("fast");
+                              let xml = $.parseXML(data);
+                              xml = $(xml);
+                              let results = xml.find('results');
+
+                              let html = `<table>`;
+                              
+                                    $.each(results.find('result'),
+                                    function(index,value) {
+                                          let res = $(value);
+                                          let name = res.text();
+                                          console.log(name);
+                                          html += `<tr><td>${index}</td><td>${name}</td></tr>`;
+                                    });
+                                    html += `</table>`;
+                                    $("#results").html(`<pre><code> resultado:${html} </code></pre>`);
+                        },
+
+                        error: function() {
+                              $('#waiting').slideUp("fast");
+                              $("#results").html(`<pre><code> error en la peticion </code></pre>`);
+                        }
+                  })
+            })
+
+      })</script>
 </body>
 
 </html>
